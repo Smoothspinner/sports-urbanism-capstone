@@ -30,9 +30,3 @@ elephants more often, because long-term use was never the point of building them
 ## Prediction
 Bid-tied status and design purpose will emerge as the strongest predictors,
 and the model will outperform a naive baseline that always predicts "stays active."
-
-
-## Repo Structure
-- `data/` — raw, interim, processed, and external datasets
-- `reports/` — proposal, EDA, preprocessing, and modeling reports
-- `source/` — data handling, feature selection, models, and visualization code
