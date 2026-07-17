@@ -38,7 +38,7 @@ un <- read_excel("data/raw/WUP2025-F21-DEGURBA-Cities_Pop.xlsx",
   pivot_longer(matches("^[0-9]{4}"),
                names_to = "year", values_to = "pop_thousands") |>
   mutate(year = as.integer(as.numeric(year))) |>
-  filter(!is.na(pop_thousands))
+  filter(!is.na(pop_thousands), year <= 2026)
 
 write_csv(un, "data/processed/un_city_population_long.csv")
 
