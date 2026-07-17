@@ -30,3 +30,11 @@ elephants more often, because long-term use was never the point of building them
 ## Prediction
 Bid-tied status and design purpose will emerge as the strongest predictors,
 and the model will outperform a naive baseline that always predicts "stays active."
+
+## Where files go
+- data/raw — original downloads, untouched, keep original filenames
+- data/processed — cleaned tables our scripts produce
+- data/external — reference pulls (e.g., Wikidata)
+- source/data — cleaning and join scripts (numbered in run order: 01_, 02_...)
+- source/models — modeling code
+- reports — weekly deliverables (proposal, EDA, etc.)
