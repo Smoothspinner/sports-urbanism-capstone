@@ -1,0 +1,266 @@
+venue_id,stadium_id,stadium_name,city_name,country_name,tournament_id,tournament_year,award_year,opened_year,stadium_capacity,design_purpose,newly_built,current_status,status_detail,not_in_use_reason,notes,wikipedia_link
+S-001,S-001,Estadio José Amalfitani,Buenos Aires,Argentina,WC-1978,1978,1966,1943,49000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/José_Amalfitani_Stadium
+S-002,S-002,Estadio Monumental,Buenos Aires,Argentina,WC-1978,1978,1966,1938,75000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Monumental_Antonio_Vespucio_Liberti
+S-003,S-003,Estadio Chateau Carreras,Córdoba,Argentina,WC-1978,1978,1966,1978,47000,Multi-purpose,New,in use,,,opened 1978 for the WC (1976 was construction),https://en.wikipedia.org/wiki/Estadio_Mario_Alberto_Kempes
+S-004,S-004,Estadio José María Minella,Mar del Plata,Argentina,WC-1978,1978,1966,1978,44000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Estadio_José_Mar%C3%ADa_Minella
+S-005,S-005,Estadio Ciudad de Mendoza,Mendoza,Argentina,WC-1978,1978,1966,1978,35000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Estadio_Malvinas_Argentinas
+S-006,S-006,Estadio Gigante de Arroyito,Rosario,Argentina,WC-1978,1978,1966,1926,46000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Gigante_de_Arroyito
+S-007,S-007,Estádio Independência,Belo Horizonte,Brazil,WC-1950,1950,1946,1950,30000,Single-purpose,New,in use,,,"opened 1950 for the WC, rebuilt 2012, in use",https://en.wikipedia.org/wiki/Estádio_Independência
+S-008,S-008,Estádio Mineirão,Belo Horizonte,Brazil,WC-2014,2014,2007,1965,43000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Mineirão
+S-009,S-009,Estádio Nacional,Brasília,Brazil,WC-2014,2014,2007,2013,70000,Multi-purpose,New,in use,,,"old national stadium demolished, rebuilt 2010-13 for the WC",https://en.wikipedia.org/wiki/Estádio_Nacional_Mané_Garrincha
+S-010,S-010,Arena Pantanal,Cuiabá,Brazil,WC-2014,2014,2007,2014,41000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Arena_Pantanal
+S-011,S-011,Arena da Baixada,Curitiba,Brazil,WC-2014,2014,2007,1999,40000,Single-purpose,Existing,in use,,,"opened 1999; the 2012-14 works were a major expansion for the WC, not a teardown; Existing",https://en.wikipedia.org/wiki/Arena_da_Baixada
+S-012,S-012,Estádio Vila Capanema,Curitiba,Brazil,WC-1950,1950,1946,1947,10000,Single-purpose,New,in use,,,"opened 1947, Brazil awarded 1946",https://en.wikipedia.org/wiki/Estádio_Vila_Capanema
+S-013,S-013,Estádio Castelão,Fortaleza,Brazil,WC-2014,2014,2007,1973,63000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Castelão_(Ceará)
+S-014,S-014,Arena da Amazônia,Manaus,Brazil,WC-2014,2014,2007,2014,41000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Arena_da_Amazônia
+S-015,S-015,Arena das Dunas,Natal,Brazil,WC-2014,2014,2007,2014,40000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Arena_das_Dunas
+S-016,S-016,Estádio Beira-Rio,Porto Alegre,Brazil,WC-2014,2014,2007,1969,43000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estádio_Beira-Rio
+S-017,S-017,Estádio dos Eucaliptos,Porto Alegre,Brazil,WC-1950,1950,1946,1931,20000,Single-purpose,Existing,not in use,demolished 2012,abandoned before demolition,,https://en.wikipedia.org/wiki/Estádio_dos_Eucaliptos
+S-018,S-018,Arena Pernambuco,Recife,Brazil,WC-2014,2014,2007,2013,43000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Arena_Pernambuco
+S-019,S-019,Estádio Ilha do Retiro,Recife,Brazil,WC-1950,1950,1946,1937,30000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estádio_Ilha_do_Retiro
+S-020,S-020,Estádio do Maracanã,Rio de Janeiro,Brazil,WC-1950,1950,1946,1950,200000,Single-purpose,New,in use,,,built for WC 1950,https://en.wikipedia.org/wiki/Maracanã_Stadium
+S-020,S-020,Estádio do Maracanã,Rio de Janeiro,Brazil,WC-2014,2014,2007,1950,200000,Single-purpose,Existing,in use,,,"2010-13 gut renovation with the structure retained; Existing, matching the IOC report's own Rio 2016 classification of this stadium",https://en.wikipedia.org/wiki/Maracanã_Stadium
+S-021,S-021,Arena Fonte Nova,Salvador,Brazil,WC-2014,2014,2007,2013,52000,Single-purpose,New,in use,,,"demolished 2010, rebuilt 2013 for the WC; football specific ground, so Single",https://en.wikipedia.org/wiki/Arena_Fonte_Nova
+S-022,S-022,Arena Corinthians,São Paulo,Brazil,WC-2014,2014,2007,2014,63000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Arena_Corinthians
+S-023,S-023,Estádio do Pacaembu,São Paulo,Brazil,WC-1950,1950,1946,1940,60000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Pacaembu_Stadium
+S-024,S-024,Commonwealth Stadium,Edmonton,Canada,WC-2015,2015,2011,1978,56000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Commonwealth_Stadium_(Edmonton)
+S-025,S-025,Moncton Stadium,Moncton,Canada,WC-2015,2015,2011,2010,13000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Moncton_Stadium
+S-026,S-026,Olympic Stadium,Montreal,Canada,WC-2015,2015,2011,1976,56000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Olympic_Stadium_(Montreal)
+S-027,S-027,TD Place Stadium,Ottawa,Canada,WC-2015,2015,2011,1908,24000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/TD_Place_Stadium
+S-028,S-028,BC Place,Vancouver,Canada,WC-2015,2015,2011,1983,54000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/BC_Place
+S-029,S-029,Investors Group Field,Winnipeg,Canada,WC-2015,2015,2011,2013,33000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Investors_Group_Field
+S-030,S-030,Estadio Carlos Dittborn,Arica,Chile,WC-1962,1962,1956,1962,18000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Estadio_Carlos_Dittborn
+S-031,S-031,Estadio El Teniente,Rancagua,Chile,WC-1962,1962,1956,1947,18000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_El_Teniente
+S-032,S-032,Estadio Nacional,Santiago,Chile,WC-1962,1962,1956,1938,67000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Nacional_Julio_Mart%C3%ADnez_Prádanos
+S-033,S-033,Estadio Sausalito,Viña del Mar,Chile,WC-1962,1962,1956,1929,18000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Sausalito
+S-034,S-034,Chengdu Sports Center,Chengdu,China,WC-2007,2007,2003,1991,40000,Multi-purpose,Existing,in use,,,"construction started 1987, completed Dec 1991",https://en.wikipedia.org/wiki/Chengdu_Sports_Centre
+S-035,S-035,New Plaza Stadium,Foshan,China,WC-1991,1991,1988,1991,14000,Multi-purpose,New,not in use,demolished 2007,urban redevelopment,"rebuilt by the city for the 1991 WWC, completed Oct 1991; demolished 2007 in a downtown redevelopment (Zhujiang Times report); award year approximate",https://en.wikipedia.org/wiki/New_Plaza_Stadium
+S-037,S-037,Guangdong Provincial Stadium,Guangzhou,China,WC-1991,1991,1988,1932,25000,Multi-purpose,Existing,in use,,,Fjelstul duplicate S-036 (spelled Gaungdong) merged here; same tournament; award year approximate,https://en.wikipedia.org/wiki/Guangdong_Provincial_People's_Stadium
+S-039,S-039,Tianhe Stadium,Guangzhou,China,WC-1991,1991,1988,1987,60000,Multi-purpose,Existing,in use,,,"Fjelstul lists this venue twice for 1991 (S-038, spelled Tainhe); merged here, map match joins from either id; opened Aug 1987 for the National Games, before the award, so Existing",https://en.wikipedia.org/wiki/Tianhe_Stadium
+S-040,S-040,Ying Tung Stadium,Guangzhou,China,WC-1991,1991,1988,1988,15000,Multi-purpose,Existing,in use,,,award year approximate,https://en.wikipedia.org/wiki/Henry_Fok_Stadium
+S-041,S-041,Yellow Dragon Sports Center,Hangzhou,China,WC-2007,2007,2003,2000,51000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Yellow_Dragon_Sports_Center
+S-042,S-042,Jiangmen Stadium,Jiangmen,China,WC-1991,1991,1988,,13000,Multi-purpose,Existing,in use,,,"opening year not on en or zh Wikipedia, but the ground hosted a full group of FIFA's 1988 Women's Invitation Tournament, so it predates the award; Existing",https://en.wikipedia.org/wiki/Jiangmen_Stadium
+S-043,S-043,Hongkou Football Stadium,Shanghai,China,WC-2007,2007,2003,1999,33000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Hongkou_Football_Stadium
+S-044,S-044,Tianjin Olympic Center,Tianjin,China,WC-2007,2007,2003,2007,60000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Tianjin_Olympic_Center
+S-045,S-045,Wuhan Sports Center,Wuhan,China,WC-2007,2007,2003,2002,60000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Wuhan_Sports_Center
+S-046,S-046,Zhongshan Stadium,Zhongshan,China,WC-1991,1991,1988,1991,12000,Multi-purpose,New,in use,,,"Xingzhong Stadium: ground broken Sep 1990, completed Jul 1991, four months before the tournament; New; award year approximate",https://en.wikipedia.org/wiki/Zhongshan_Sports_Center_Stadium
+S-047,S-047,Villa Park,Birmingham,England,WC-1966,1966,1960,1897,52000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Villa_Park
+S-048,S-048,Goodison Park,Liverpool,England,WC-1966,1966,1960,1892,50000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Goodison_Park
+S-049,S-049,Wembley Stadium,London,England,WC-1966,1966,1960,1923,99000,Single-purpose,Existing,in use,rebuilt 2007,,"demolished 2002, new Wembley opened on the same footprint 2007; in use (rebuilt) per the IOC convention (their own Empire Stadium row)",https://en.wikipedia.org/wiki/Wembley_Stadium_(1923)
+S-050,S-050,White City Stadium,London,England,WC-1966,1966,1960,1908,77000,Multi-purpose,Existing,not in use,demolished 1985,urban redevelopment,,https://en.wikipedia.org/wiki/White_City_Stadium
+S-051,S-051,Old Trafford,Manchester,England,WC-1966,1966,1960,1910,58000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Old_Trafford
+S-052,S-052,Ayresome Park,Middlesbrough,England,WC-1966,1966,1960,1903,40000,Single-purpose,Existing,not in use,demolished 1997,replaced by successor stadium,,https://en.wikipedia.org/wiki/Ayresome_Park
+S-053,S-053,Hillsborough Stadium,Sheffield,England,WC-1966,1966,1960,1899,43000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Hillsborough_Stadium
+S-054,S-054,Roker Park,Sunderland,England,WC-1966,1966,1960,1898,40000,Single-purpose,Existing,not in use,demolished 1998,replaced by successor stadium,,https://en.wikipedia.org/wiki/Roker_Park
+S-055,S-055,Stade du Fort Carré,Antibes,France,WC-1938,1938,1936,1935,7000,Multi-purpose,Existing,in use,,,opened 1935,https://en.wikipedia.org/wiki/Stade_du_Fort_Carré
+S-056,S-056,Stade du Parc Lescure,Bordeaux,France,WC-1938,1938,1936,1938,35000,Multi-purpose,New,in use,,,rebuilt 1935-38 for the WC,https://en.wikipedia.org/wiki/Stade_Chaban-Delmas
+S-056,S-056,Stade du Parc Lescure,Bordeaux,France,WC-1998,1998,1992,1938,35000,Multi-purpose,Existing,in use,,,same 1938 building; Existing,https://en.wikipedia.org/wiki/Stade_Chaban-Delmas
+S-057,S-057,Stade des Alpes,Grenoble,France,WC-2019,2019,2015,2008,18000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stade_des_Alpes
+S-058,S-058,Stade Jules Deschaseaux,Le Havre,France,WC-1938,1938,1936,1932,22000,Multi-purpose,Existing,in use,,,opened 1932,https://en.wikipedia.org/wiki/Stade_Jules_Deschaseaux
+S-059,S-059,Stade Océane,Le Havre,France,WC-2019,2019,2015,2012,24000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stade_Océane
+S-060,S-060,Stade Félix-Bollaert,Lens,France,WC-1998,1998,1992,1933,41000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stade_Bollaert-Delelis
+S-061,S-061,Stade Victor Boucquey,Lille,France,WC-1938,1938,1936,1902,15000,Single-purpose,Existing,not in use,demolished 1975,replaced by successor stadium,,https://en.wikipedia.org/wiki/Stade_Henri-Jooris
+S-062,S-062,Parc Olympique Lyonnais,Lyon,France,WC-2019,2019,2015,2016,58000,Single-purpose,New,in use,,,"opened Jan 2016, WWC awarded Mar 2015; club project planned earlier; New under the two dates rule",https://en.wikipedia.org/wiki/Parc_Olympique_Lyonnais
+S-063,S-063,Stade de Gerland,Lyon,France,WC-1998,1998,1992,1926,44000,Multi-purpose,Existing,in use,,,"built 1914, opened 1926",https://en.wikipedia.org/wiki/Stade_de_Gerland
+S-064,S-064,Stade Vélodrome,Marseille,France,WC-1938,1938,1936,1937,60000,Multi-purpose,New,in use,,,"opened 1937, France awarded 1936",https://en.wikipedia.org/wiki/Stade_Vélodrome
+S-064,S-064,Stade Vélodrome,Marseille,France,WC-1998,1998,1992,1937,60000,Multi-purpose,Existing,in use,,,major renovation for WC98 but the same building; Existing,https://en.wikipedia.org/wiki/Stade_Vélodrome
+S-065,S-065,Stade de la Mosson,Montpellier,France,WC-1998,1998,1992,1972,34000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stade_de_la_Mosson
+S-065,S-065,Stade de la Mosson,Montpellier,France,WC-2019,2019,2015,1972,34000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stade_de_la_Mosson
+S-066,S-066,Stade de la Beaujoire,Nantes,France,WC-1998,1998,1992,1984,40000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stade_de_la_Beaujoire
+S-067,S-067,Allianz Riviera,Nice,France,WC-2019,2019,2015,2013,35000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Allianz_Riviera
+S-068,S-068,Parc des Princes,Paris,France,WC-1938,1938,1936,1897,49000,Multi-purpose,Existing,in use,rebuilt 1972,,"the 1897 velodrome as expanded in 1932; cycle track in use until 1967, so Multi in 1938",https://en.wikipedia.org/wiki/Parc_des_Princes
+S-068,S-068,Parc des Princes,Paris,France,WC-1998,1998,1992,1972,49000,Single-purpose,Existing,in use,,,"1972 building, football only",https://en.wikipedia.org/wiki/Parc_des_Princes
+S-068,S-068,Parc des Princes,Paris,France,WC-2019,2019,2015,1972,49000,Single-purpose,Existing,in use,,,"1972 building, football only",https://en.wikipedia.org/wiki/Parc_des_Princes
+S-069,S-069,Stade Olympique de Colombes,Paris,France,WC-1938,1938,1936,1907,60000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stade_Olympique_Yves-du-Manoir
+S-070,S-070,Stade Auguste-Delaune,Reims,France,WC-2019,2019,2015,1935,21000,Multi-purpose,Existing,in use,,,"same Reims venue as the 1938 Velodrome Municipal row (S-071); rebuilt 2004-08, well before the 2015 award",https://en.wikipedia.org/wiki/Stade_Auguste-Delaune
+S-070,S-071,Vélodrome Municipal,Reims,France,WC-1938,1938,1936,1935,22000,Multi-purpose,Existing,in use,,,later renamed Stade Auguste-Delaune; same venue as S-070,https://en.wikipedia.org/wiki/Stade_Auguste_Delaune
+S-072,S-072,Roazhon Park,Rennes,France,WC-2019,2019,2015,1912,29000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Roazhon_Park
+S-073,S-073,Stade de France,Saint-Denis,France,WC-1998,1998,1992,1998,80000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Stade_de_France
+S-074,S-074,Stade Geoffroy-Guichard,Saint-Étienne,France,WC-1998,1998,1992,1931,36000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stade_Geoffroy-Guichard
+S-075,S-075,Stade de la Meinau,Strasbourg,France,WC-1938,1938,1936,1914,30000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stade_de_la_Meinau
+S-076,S-076,Stade de Toulouse,Toulouse,France,WC-1998,1998,1992,1937,37000,Multi-purpose,Existing,in use,,,"opened 1937, renovated 1949",https://en.wikipedia.org/wiki/Stadium_Municipal
+S-077,S-077,Stade du T.O.E.C.,Toulouse,France,WC-1938,1938,1936,1908,15000,Multi-purpose,Existing,not in use,demolished 1965,urban redevelopment,"Stade Chapou, the TOEC ground; opened 1908; requisitioned by the education ministry and demolished 1965 to build the Chapou university residence",https://en.wikipedia.org/wiki/Stade_Chapou
+S-078,S-078,Stade du Hainaut,Valenciennes,France,WC-2019,2019,2015,2011,23000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stade_du_Hainaut
+S-079,S-079,Impuls Arena,Augsburg,Germany,WC-2011,2011,2007,2009,25000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Impuls_Arena
+S-080,S-080,Olympiastadion,Berlin,Germany,WC-1974,1974,1966,1936,86000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Olympiastadion_(Berlin)
+S-080,S-080,Olympiastadion,Berlin,Germany,WC-2006,2006,2000,1936,86000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Olympiastadion_(Berlin)
+S-080,S-080,Olympiastadion,Berlin,Germany,WC-2011,2011,2007,1936,86000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Olympiastadion_(Berlin)
+S-081,S-081,Ruhrstadion,Bochum,Germany,WC-2011,2011,2007,1911,21000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Ruhrstadion
+S-082,S-082,RheinEnergieStadion,Cologne,Germany,WC-2006,2006,2000,2004,45000,Single-purpose,New,in use,,,"Mungersdorfer demolished 2001, rebuilt 2004 ahead of the WC",https://en.wikipedia.org/wiki/RheinEnergieStadion
+S-083,S-083,Westfalenstadion,Dortmund,Germany,WC-1974,1974,1966,1974,65000,Single-purpose,New,in use,,,opened 1974 for the WC,https://en.wikipedia.org/wiki/Westfalenstadion
+S-083,S-083,Westfalenstadion,Dortmund,Germany,WC-2006,2006,2000,1974,65000,Single-purpose,Existing,in use,,,"same 1974 building, expanded in stages; Existing",https://en.wikipedia.org/wiki/Westfalenstadion
+S-084,S-084,Rudolf-Harbig-Stadion,Dresden,Germany,WC-2011,2011,2007,2009,26000,Single-purpose,New,in use,,,"old ground demolished, new stadium built 2007-09; New",https://en.wikipedia.org/wiki/Rudolf-Harbig-Stadion
+S-085,S-085,Rheinstadion,Düsseldorf,Germany,WC-1974,1974,1966,1925,70000,Multi-purpose,Existing,in use,rebuilt 2004,,"demolished 2002, Merkur Spiel-Arena built on the same site, opened 2004; in use (rebuilt) per the IOC convention",https://en.wikipedia.org/wiki/Rheinstadion
+S-086,S-086,Waldstadion,Frankfurt,Germany,WC-1974,1974,1966,1974,62000,Multi-purpose,New,in use,rebuilt 2005,,rebuilt virtually from scratch 1972-74 for the WC (per the article); New; still a multi sport venue then,https://en.wikipedia.org/wiki/Waldstadion_(Frankfurt)
+S-086,S-086,Waldstadion,Frankfurt,Germany,WC-2006,2006,2000,2005,62000,Single-purpose,New,in use,,,"demolished and rebuilt 2002-05 as a football only arena for WC2006; New, same class as Cologne and Leipzig; design purpose becomes Single here",https://en.wikipedia.org/wiki/Waldstadion_(Frankfurt)
+S-086,S-086,Waldstadion,Frankfurt,Germany,WC-2011,2011,2007,2005,62000,Single-purpose,Existing,in use,,,"2005 building, so Existing",https://en.wikipedia.org/wiki/Waldstadion_(Frankfurt)
+S-087,S-087,Arena AufShalke,Gelsenkirchen,Germany,WC-2006,2006,2000,2001,52000,Single-purpose,New,in use,,,"opened Aug 2001, awarded Jul 2000; construction started 1998 as a club project; New under the two dates rule",https://en.wikipedia.org/wiki/Arena_AufSchalke
+S-088,S-088,Parkstadion,Gelsenkirchen,Germany,WC-1974,1974,1966,1973,72000,Multi-purpose,New,in use,rebuilt 2020,,"partly dismantled 2004 and 2008 after Schalke moved next door; rebuilt 2015-20 on the same grounds as a 5,000 seat stadium for Schalke U19/U23, so in use (rebuilt)",https://en.wikipedia.org/wiki/Parkstadion
+S-089,S-089,Volksparkstadion,Hamburg,Germany,WC-1974,1974,1966,1953,61000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Volksparkstadion
+S-089,S-089,Volksparkstadion,Hamburg,Germany,WC-2006,2006,2000,1953,61000,Single-purpose,Existing,in use,,,"torn down and rebuilt 1998-2000, finished by the Jul 2000 award, so Existing",https://en.wikipedia.org/wiki/Volksparkstadion
+S-090,S-090,Niedersachsenstadion,Hanover,Germany,WC-1974,1974,1966,1954,60000,Multi-purpose,Existing,in use,,,multi sport bowl with athletics track,https://en.wikipedia.org/wiki/Niedersachsenstadion
+S-090,S-090,Niedersachsenstadion,Hanover,Germany,WC-2006,2006,2000,1954,60000,Single-purpose,Existing,in use,,,"2003-04 redevelopment kept the 1954 bowl; structure retained, so Existing (full demolition only counts as New)",https://en.wikipedia.org/wiki/Niedersachsenstadion
+S-091,S-091,Fritz-Walter-Stadion,Kaiserslautern,Germany,WC-2006,2006,2000,1920,46000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Fritz-Walter-Stadion
+S-092,S-092,Zentralstadion,Leipzig,Germany,WC-2006,2006,2000,2004,43000,Single-purpose,New,in use,,,old Zentralstadion 1956; completely rebuilt 2000-04 for the WC,https://en.wikipedia.org/wiki/Red_Bull_Arena_(Leipzig)
+S-093,S-093,BayArena,Leverkusen,Germany,WC-2011,2011,2007,1958,30000,Single-purpose,Existing,in use,,,opened 1958; the 1932 date in the wikidata pull is the old Stadtpark ground,https://en.wikipedia.org/wiki/BayArena
+S-094,S-094,Borussia-Park,Mönchengladbach,Germany,WC-2011,2011,2007,2004,46000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Borussia-Park
+S-095,S-095,Allianz Arena,Munich,Germany,WC-2006,2006,2000,2005,66000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Allianz_Arena
+S-096,S-096,Olympiastadion,Munich,Germany,WC-1974,1974,1966,1972,78000,Multi-purpose,New,in use,,,"built for the 1972 Munich Olympics; did not exist at the 1966 award, so New by the award date test (same call as Kazan and Fisht)",https://en.wikipedia.org/wiki/Olympiastadion_(Munich)
+S-097,S-097,Frankenstadion,Nuremberg,Germany,WC-2006,2006,2000,1928,41000,Multi-purpose,Existing,in use,,,"opened 1928, renovated 2005",https://en.wikipedia.org/wiki/Nuremberg
+S-098,S-098,Rhein-Neckar-Arena,Sinsheim,Germany,WC-2011,2011,2007,2009,30000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Rhein-Neckar-Arena
+S-099,S-099,Neckarstadion,Stuttgart,Germany,WC-1974,1974,1966,1929,72000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Mercedes-Benz_Arena_(Stuttgart)
+S-099,S-099,Neckarstadion,Stuttgart,Germany,WC-2006,2006,2000,1929,72000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Mercedes-Benz_Arena_(Stuttgart)
+S-100,S-100,Volkswagen Arena,Wolfsburg,Germany,WC-2011,2011,2007,2002,26000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Volkswagen_Arena
+S-101,S-101,Stadio San Nicola,Bari,Italy,WC-1990,1990,1984,1990,51000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Stadio_San_Nicola
+S-102,S-102,Stadio Renato Dall'Ara,Bologna,Italy,WC-1934,1934,1932,1927,50000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stadio_Renato_Dall%27Ara
+S-102,S-102,Stadio Renato Dall'Ara,Bologna,Italy,WC-1990,1990,1984,1927,50000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stadio_Renato_Dall%27Ara
+S-103,S-103,Stadio Sant'Elia,Cagliari,Italy,WC-1990,1990,1984,1970,35000,Single-purpose,Existing,not in use,demolished 2017,replaced by successor stadium,,https://en.wikipedia.org/wiki/Stadio_Sant%27Elia
+S-104,S-104,Stadio Comunale,Florence,Italy,WC-1990,1990,1984,1931,39000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stadio_Artemio_Franchi
+S-105,S-105,Stadio Giovanni Berta,Florence,Italy,WC-1934,1934,1932,1931,47000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stadio_Artemio_Franchi_(Florence)
+S-106,S-106,Stadio Luigi Ferraris,Genoa,Italy,WC-1934,1934,1932,1911,37000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stadio_Luigi_Ferraris
+S-106,S-106,Stadio Luigi Ferraris,Genoa,Italy,WC-1990,1990,1984,1911,37000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stadio_Luigi_Ferraris
+S-107,S-107,San Siro,Milan,Italy,WC-1934,1934,1932,1926,75000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/San_Siro
+S-107,S-107,San Siro,Milan,Italy,WC-1990,1990,1984,1926,75000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/San_Siro
+S-108,S-108,Stadio Giorgio Ascarelli,Naples,Italy,WC-1934,1934,1932,1934,40000,Multi-purpose,New,not in use,"destroyed 1942, war",war,rebuilt 1933-34 for the WC; destroyed 1942 in the war,https://en.wikipedia.org/wiki/Stadio_Giorgio_Ascarelli
+S-109,S-109,Stadio San Paolo,Naples,Italy,WC-1990,1990,1984,1959,60000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stadio_San_Paolo
+S-110,S-110,Stadio La Favorita,Palermo,Italy,WC-1990,1990,1984,1932,33000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stadio_Renzo_Barbera
+S-111,S-111,Stadio Nazionale PNF,Rome,Italy,WC-1934,1934,1932,1911,47000,Multi-purpose,Existing,not in use,demolished 1957,replaced by successor stadium,"closed 1953, demolished 1957, replaced by Stadio Flaminio, which has itself been closed since 2011",https://en.wikipedia.org/wiki/Stadio_Nazionale_PNF
+S-112,S-112,Stadio Olimpico,Rome,Italy,WC-1990,1990,1984,1953,74000,Multi-purpose,Existing,in use,,,"1953 stadium heavily reconstructed 1987-90 for the WC but the venue is continuous; Existing, matching the IOC report's own Rome 1960 row",https://en.wikipedia.org/wiki/Stadio_Olimpico
+S-113,S-113,Stadio Littorio,Trieste,Italy,WC-1934,1934,1932,1932,8000,Multi-purpose,Existing,in use,,,"inaugurated 25 Sep 1932, two weeks before Italy was awarded the WC on 9 Oct 1932; Existing",https://en.wikipedia.org/wiki/Stadio_Giuseppe_Grezar
+S-114,S-114,Stadio Benito Mussolini,Turin,Italy,WC-1934,1934,1932,1933,28000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Stadio_Olimpico_Grande_Torino
+S-115,S-115,Stadio delle Alpi,Turin,Italy,WC-1990,1990,1984,1990,63000,Multi-purpose,New,in use,rebuilt 2011,,"delle Alpi demolished 2009, Juventus Stadium built on the same site, opened 2011; in use (rebuilt) per the IOC convention",https://en.wikipedia.org/wiki/Stadio_delle_Alpi
+S-116,S-116,Stadio Friuli,Udine,Italy,WC-1990,1990,1984,1976,36000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stadio_Friuli
+S-117,S-117,Stadio Marc'Antonio Bentegodi,Verona,Italy,WC-1990,1990,1984,1963,36000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Stadio_Marc%27Antonio_Bentegodi
+S-118,S-118,Kashima Stadium,Ibaraki,Japan,WC-2002,2002,1996,1993,42000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Kashima_Soccer_Stadium
+S-119,S-119,Kobe Wing Stadium,Kobe,Japan,WC-2002,2002,1996,2001,42000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Kobe_Wing_Stadium
+S-120,S-120,Miyagi Stadium,Miyagi,Japan,WC-2002,2002,1996,2000,49000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Miyagi_Stadium
+S-121,S-121,Niigata Stadium,Niigata,Japan,WC-2002,2002,1996,2001,42000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Denka_Big_Swan_Stadium
+S-122,S-122,Ōita Stadium,Ōita,Japan,WC-2002,2002,1996,2001,43000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Showa_Denko_Dome_Oita
+S-123,S-123,Nagai Stadium,Osaka,Japan,WC-2002,2002,1996,1964,50000,Multi-purpose,Existing,in use,,,"athletics stadium with a running track, so Multi",https://en.wikipedia.org/wiki/Nagai_Stadium
+S-124,S-124,Saitama Stadium,Saitama,Japan,WC-2002,2002,1996,2001,63000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Saitama_Stadium_2002
+S-125,S-125,Sapporo Dome,Sapporo,Japan,WC-2002,2002,1996,2001,42000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Sapporo_Dome
+S-126,S-126,Shizuoka Stadium ECOPA,Shizuoka,Japan,WC-2002,2002,1996,2001,51000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Shizuoka_Stadium
+S-127,S-127,International Stadium Yokohama,Yokohama,Japan,WC-2002,2002,1996,1998,72000,Multi-purpose,New,in use,,,"opened 1998, awarded 1996, construction started 1994; New under the two dates rule",https://en.wikipedia.org/wiki/International_Stadium_Yokohama
+S-128,S-128,Estadio Jalisco,Guadalajara,Mexico,WC-1970,1970,1964,1960,71000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Jalisco
+S-128,S-128,Estadio Jalisco,Guadalajara,Mexico,WC-1986,1986,1983,1960,71000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Jalisco
+S-129,S-129,Estadio Tres de Marzo,Guadalajara,Mexico,WC-1986,1986,1983,1971,30000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Tres_de_Marzo
+S-130,S-130,Estadio Sergio León Chavez,Irapuato,Mexico,WC-1986,1986,1983,1969,31000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Sergio_León_Chávez
+S-131,S-131,Estadio Nou Camp,León,Mexico,WC-1970,1970,1964,1967,31000,Single-purpose,New,in use,,,"opened 1967, awarded 1964",https://en.wikipedia.org/wiki/Estadio_Nou_Camp
+S-131,S-131,Estadio Nou Camp,León,Mexico,WC-1986,1986,1983,1967,31000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Nou_Camp
+S-132,S-132,Estadio Azteca,Mexico City,Mexico,WC-1970,1970,1964,1966,115000,Single-purpose,New,in use,,,"opened 1966, Mexico awarded Oct 1964, ground broken 1962; New under the two dates rule",https://en.wikipedia.org/wiki/Estadio_Azteca
+S-132,S-132,Estadio Azteca,Mexico City,Mexico,WC-1986,1986,1983,1966,115000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Azteca
+S-133,S-133,Estadio Olímpico Universitario,Mexico City,Mexico,WC-1986,1986,1983,1952,72000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Ol%C3%ADmpico_Universitario
+S-134,S-134,Estadio Tecnológico,Monterrey,Mexico,WC-1986,1986,1983,1950,34000,Multi-purpose,Existing,not in use,demolished 2017,replaced by successor stadium,,https://en.wikipedia.org/wiki/Estadio_Tecnológico
+S-135,S-135,Estadio Universitario,Monterrey,Mexico,WC-1986,1986,1983,1967,44000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Universitario_(UANL)
+S-136,S-136,Estadio Neza 86,Nezahualcóyotl,Mexico,WC-1986,1986,1983,1981,35000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Neza_86
+S-137,S-137,Estadio Cuauhtémoc,Puebla,Mexico,WC-1970,1970,1964,1968,46000,Single-purpose,New,in use,,,"built for WC70, opened 1968",https://en.wikipedia.org/wiki/Estadio_Cuauhtémoc
+S-137,S-137,Estadio Cuauhtémoc,Puebla,Mexico,WC-1986,1986,1983,1968,46000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Cuauhtémoc
+S-138,S-138,Estadio La Corregidora,Querétaro,Mexico,WC-1986,1986,1983,1985,39000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Estadio_La_Corregidora
+S-139,S-139,La Bombonera,Toluca,Mexico,WC-1970,1970,1964,1940,33000,Single-purpose,Existing,in use,,,opened 1940; the 1954 date in the wikidata pull is the third tier completion,https://en.wikipedia.org/wiki/Estadio_Nemesio_D%C3%ADez
+S-139,S-139,La Bombonera,Toluca,Mexico,WC-1986,1986,1983,1940,33000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Nemesio_D%C3%ADez
+S-140,S-140,Al Bayt Stadium,Al Khor,Qatar,WC-2022,2022,2010,2021,69000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Al_Bayt_Stadium
+S-141,S-141,Ahmad bin Ali Stadium,Al Rayyan,Qatar,WC-2022,2022,2010,2020,45000,Single-purpose,New,in use,,,"2003 stadium demolished 2015 and rebuilt, opened 2020",https://en.wikipedia.org/wiki/Ahmad_bin_Ali_Stadium
+S-142,S-142,Education City Stadium,Al Rayyan,Qatar,WC-2022,2022,2010,2020,45000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Education_City_Stadium
+S-143,S-143,Khalifa International Stadium,Al Rayyan,Qatar,WC-2022,2022,2010,1976,46000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Khalifa_International_Stadium
+S-144,S-144,Al Janoub Stadium,Al Wakrah,Qatar,WC-2022,2022,2010,2019,44000,Single-purpose,New,in use,,,"purpose built WC2022 venue, opened 2019",https://en.wikipedia.org/wiki/Al_Janoub_Stadium
+S-145,S-145,Al Thumama Stadium,Doha,Qatar,WC-2022,2022,2010,2021,44000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Al_Thumama_Stadium
+S-146,S-146,Stadium 974,Doha,Qatar,WC-2022,2022,2010,2021,44000,Single-purpose,New,in use,,,dismountable by design (shipping container build); idle since the WC with dismantling and relocation planned; excluded from the white elephant class under the team's temporary venue rule,https://en.wikipedia.org/wiki/Stadium_974
+S-147,S-147,Lusail Stadium,Lusail,Qatar,WC-2022,2022,2010,2022,89000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Lusail_Stadium
+S-148,S-148,Kaliningrad Stadium,Kaliningrad,Russia,WC-2018,2018,2010,2018,34000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Kaliningrad_Stadium
+S-149,S-149,Kazan Arena,Kazan,Russia,WC-2018,2018,2010,2013,43000,Single-purpose,New,in use,,,"built for the 2013 Universiade, after the 2010 award, part of the WC host program",https://en.wikipedia.org/wiki/Kazan_Arena
+S-150,S-150,Luzhniki Stadium,Moscow,Russia,WC-2018,2018,2010,1956,78000,Multi-purpose,Existing,in use,,,"gut rebuilt 2013-17 behind the 1956 shell; structure retained, so Existing, same treatment as Maracana",https://en.wikipedia.org/wiki/Luzhniki_Stadium
+S-151,S-151,Otkritie Arena,Moscow,Russia,WC-2018,2018,2010,2014,44000,Multi-purpose,New,in use,,,opened 2014 (2010 was the construction start),https://en.wikipedia.org/wiki/Otkritie_Arena
+S-152,S-152,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia,WC-2018,2018,2010,2018,43000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Nizhny_Novgorod_Stadium
+S-153,S-153,Rostov Arena,Rostov-on-Don,Russia,WC-2018,2018,2010,2018,43000,Single-purpose,New,in use,,,"built 2014-18, first match Apr 2018",https://en.wikipedia.org/wiki/Rostov_Arena
+S-154,S-154,Krestovsky Stadium,Saint Petersburg,Russia,WC-2018,2018,2010,2017,64000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Krestovsky_Stadium
+S-155,S-155,Samara Arena,Samara,Russia,WC-2018,2018,2010,2018,42000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Samara_Arena
+S-156,S-156,Mordovia Arena,Saransk,Russia,WC-2018,2018,2010,2018,42000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Mordovia_Arena
+S-157,S-157,Fisht Olympic Stadium,Sochi,Russia,WC-2018,2018,2010,2014,44000,Multi-purpose,New,in use,,,"built for the 2014 Sochi Olympics, opened after the 2010 award; refit for the WC",https://en.wikipedia.org/wiki/Fisht_Olympic_Stadium
+S-158,S-158,Volgograd Arena,Volgograd,Russia,WC-2018,2018,2010,2018,44000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Volgograd_Arena
+S-159,S-159,Central Stadium,Yekaterinburg,Russia,WC-2018,2018,2010,1957,33000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Central_Stadium_(Yekaterinburg)
+S-160,S-160,Free State Stadium,Bloemfontein,South Africa,WC-2010,2010,2004,1955,41000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Free_State_Stadium
+S-161,S-161,Cape Town Stadium,Cape Town,South Africa,WC-2010,2010,2004,2009,64000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Cape_Town_Stadium
+S-162,S-162,Moses Mabhida Stadium,Durban,South Africa,WC-2010,2010,2004,2009,63000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Moses_Mabhida_Stadium
+S-163,S-163,Ellis Park Stadium,Johannesburg,South Africa,WC-2010,2010,2004,1928,56000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Ellis_Park_Stadium
+S-164,S-164,Soccer City,Johannesburg,South Africa,WC-2010,2010,2004,2009,84000,Multi-purpose,New,in use,,,1989 stadium nearly fully rebuilt 2006-09 for the WC,https://en.wikipedia.org/wiki/FNB_Stadium
+S-165,S-165,Mbombela Stadium,Nelspruit,South Africa,WC-2010,2010,2004,2009,41000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Mbombela_Stadium
+S-166,S-166,Peter Mokaba Stadium,Polokwane,South Africa,WC-2010,2010,2004,2010,42000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Peter_Mokaba_Stadium
+S-167,S-167,Nelson Mandela Bay Stadium,Port Elizabeth,South Africa,WC-2010,2010,2004,2009,42000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Nelson_Mandela_Bay_Stadium
+S-168,S-168,Loftus Versfeld Stadium,Pretoria,South Africa,WC-2010,2010,2004,1923,43000,Multi-purpose,Existing,in use,,,"construction 1906-1923, opened 1923",https://en.wikipedia.org/wiki/Loftus_Versfeld_Stadium
+S-169,S-169,Royal Bafokeng Stadium,Rustenburg,South Africa,WC-2010,2010,2004,1999,42000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Royal_Bafokeng_Stadium
+S-170,S-170,Busan Asiad Stadium,Busan,South Korea,WC-2002,2002,1996,2001,56000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Busan_Asiad_Stadium
+S-171,S-171,Daegu World Cup Stadium,Daegu,South Korea,WC-2002,2002,1996,2001,68000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Daegu_Stadium
+S-172,S-172,Daejeon World Cup Stadium,Daejeon,South Korea,WC-2002,2002,1996,2001,40000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Daejeon_World_Cup_Stadium
+S-173,S-173,Gwangju World Cup Stadium,Gwangju,South Korea,WC-2002,2002,1996,2001,43000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Gwangju_World_Cup_Stadium
+S-174,S-174,Incheon Munhak Stadium,Incheon,South Korea,WC-2002,2002,1996,2002,52000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Incheon_Munhak_Stadium
+S-175,S-175,Jeonju World Cup Stadium,Jeonju,South Korea,WC-2002,2002,1996,2001,42000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Jeonju_World_Cup_Stadium
+S-176,S-176,Jeju World Cup Stadium,Seogwipo,South Korea,WC-2002,2002,1996,2001,42000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Jeju_World_Cup_Stadium
+S-177,S-177,Seoul World Cup Stadium,Seoul,South Korea,WC-2002,2002,1996,2001,64000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Seoul_World_Cup_Stadium
+S-178,S-178,Suwon World Cup Stadium,Suwon,South Korea,WC-2002,2002,1996,2001,43000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Suwon_World_Cup_Stadium
+S-179,S-179,Ulsan Munsu Football Stadium,Ulsan,South Korea,WC-2002,2002,1996,2001,44000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Ulsan_Munsu_Football_Stadium
+S-180,S-180,Estadio Riazor,A Coruña,Spain,WC-1982,1982,1966,1944,34000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Riazor
+S-181,S-181,Estadio José Rico Pérez,Alicante,Spain,WC-1982,1982,1966,1974,33000,Multi-purpose,New,in use,,,"club built, opened 1974, Spain awarded 1966",https://en.wikipedia.org/wiki/Estadio_José_Rico_Pérez
+S-182,S-182,Camp Nou,Barcelona,Spain,WC-1982,1982,1966,1957,121000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Camp_Nou
+S-183,S-183,Estadi de Sarrià,Barcelona,Spain,WC-1982,1982,1966,1923,40000,Single-purpose,Existing,not in use,demolished 1997,urban redevelopment,,https://en.wikipedia.org/wiki/Sarrià_Stadium
+S-184,S-184,Estadio San Mamés,Bilbao,Spain,WC-1982,1982,1966,1913,46000,Single-purpose,Existing,not in use,demolished 2013,replaced by successor stadium,,https://en.wikipedia.org/wiki/San_Mamés_Stadium_(1913)
+S-185,S-185,Nuevo Estadio,Elche,Spain,WC-1982,1982,1966,1976,53000,Single-purpose,New,in use,,,"opened 1976, Spain awarded 1966 (16 year lead)",https://en.wikipedia.org/wiki/Estadio_Manuel_Mart%C3%ADnez_Valero
+S-186,S-186,Estadio El Molinón,Gijón,Spain,WC-1982,1982,1966,1908,45000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/El_Molinón
+S-187,S-187,Estadio Santiago Bernabéu,Madrid,Spain,WC-1982,1982,1966,1947,90000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Santiago_Bernabéu_Stadium
+S-188,S-188,Vicente Calderón,Madrid,Spain,WC-1982,1982,1966,1966,66000,Single-purpose,Existing,not in use,demolished 2019,replaced by successor stadium,,https://en.wikipedia.org/wiki/Vicente_Calderón_Stadium
+S-189,S-189,Estadio La Rosaleda,Málaga,Spain,WC-1982,1982,1966,1941,45000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_La_Rosaleda
+S-190,S-190,Estadio Carlos Tartiere,Oviedo,Spain,WC-1982,1982,1966,1932,24000,Multi-purpose,Existing,not in use,demolished 2003,replaced by successor stadium,,https://en.wikipedia.org/wiki/Estadio_Carlos_Tartiere_(1932)
+S-191,S-191,Estadio Benito Villamarín,Seville,Spain,WC-1982,1982,1966,1929,50000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Estadio_Benito_Villamar%C3%ADn
+S-192,S-192,Estadio Ramón Sánchez Pizjuán,Seville,Spain,WC-1982,1982,1966,1958,68000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Ramón_Sánchez_Pizjuán_Stadium
+S-193,S-193,Estadio Luis Casanova,Valencia,Spain,WC-1982,1982,1966,1923,50000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Mestalla_Stadium
+S-194,S-194,Estadio José Zorrilla,Valladolid,Spain,WC-1982,1982,1966,1982,30000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Estadio_José_Zorrilla
+S-195,S-195,Balaídos,Vigo,Spain,WC-1982,1982,1966,1928,33000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Bala%C3%ADdos
+S-196,S-196,Estadio La Romareda,Zaragoza,Spain,WC-1982,1982,1966,1957,42000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/La_Romareda
+S-197,S-197,Ryavallen,Borås,Sweden,WC-1958,1958,1950,1941,15000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Ryavallen
+S-198,S-198,Tunavallen,Eskilstuna,Sweden,WC-1958,1958,1950,1924,22000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Tunavallen
+S-199,S-199,Strömvallen,Gävle,Sweden,WC-1995,1995,1993,1903,7000,Single-purpose,Existing,in use,,,award year approximate,https://en.wikipedia.org/wiki/Strömvallen
+S-200,S-200,Ullevi,Gothenburg,Sweden,WC-1958,1958,1950,1958,54000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Ullevi
+S-201,S-201,Örjans Vall,Halmstad,Sweden,WC-1958,1958,1950,1922,15000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Örjans_Vall
+S-202,S-202,Olympia,Helsingborg,Sweden,WC-1958,1958,1950,1898,27000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Olympia_(Helsingborg)
+S-202,S-202,Olympia,Helsingborg,Sweden,WC-1995,1995,1993,1898,27000,Single-purpose,Existing,in use,,,award year approximate,https://en.wikipedia.org/wiki/Olympia_(Helsingborg)
+S-203,S-203,Tingvalla IP,Karlstad,Sweden,WC-1995,1995,1993,1919,5000,Multi-purpose,Existing,in use,,,award year approximate,https://en.wikipedia.org/wiki/Tingvalla_IP
+S-204,S-204,Malmö Stadion,Malmö,Sweden,WC-1958,1958,1950,1958,30000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Malmö_Stadion
+S-205,S-205,Idrottsparken,Norrköping,Sweden,WC-1958,1958,1950,1903,20000,Multi-purpose,Existing,in use,,,opened 25 Sep 1903,https://en.wikipedia.org/wiki/Nya_Parken
+S-206,S-206,Eyravallen,Örebro,Sweden,WC-1958,1958,1950,1923,13000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Behrn_Arena
+S-207,S-207,Jernvallen,Sandviken,Sweden,WC-1958,1958,1950,1938,20000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Jernvallen
+S-208,S-208,Råsunda Stadium,Solna,Sweden,WC-1958,1958,1950,1937,52000,Single-purpose,Existing,not in use,demolished 2013,replaced by successor stadium,,https://en.wikipedia.org/wiki/Råsunda_Stadium
+S-208,S-208,Råsunda Stadium,Solna,Sweden,WC-1995,1995,1993,1937,52000,Single-purpose,Existing,not in use,demolished 2013,replaced by successor stadium,award year approximate,https://en.wikipedia.org/wiki/Råsunda_Stadium
+S-209,S-209,Rimnersvallen,Uddevalla,Sweden,WC-1958,1958,1950,1923,18000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Rimnersvallen
+S-210,S-210,Arosvallen,Västerås,Sweden,WC-1958,1958,1950,1932,10000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Arosvallen
+S-210,S-210,Arosvallen,Västerås,Sweden,WC-1995,1995,1993,1932,10000,Multi-purpose,Existing,in use,,,award year approximate,https://en.wikipedia.org/wiki/Arosvallen
+S-211,S-211,St. Jakob Stadium,Basel,Switzerland,WC-1954,1954,1946,1954,55000,Single-purpose,New,in use,rebuilt 2001,,"built for WC54; closed 1998, St. Jakob-Park built on the same site, opened 2001; in use (rebuilt) per the IOC convention",https://en.wikipedia.org/wiki/St._Jakob_Stadium
+S-212,S-212,Wankdorf Stadium,Bern,Switzerland,WC-1954,1954,1946,1954,65000,Single-purpose,New,in use,rebuilt 2005,,"the 1925 Wankdorf was demolished and rebuilt for the WC, inaugurated just before the tournament, so New; demolished 2001 and replaced on the same site by Stadion Wankdorf in 2005, so in use (rebuilt)",https://en.wikipedia.org/wiki/Wankdorf_Stadium
+S-213,S-213,Charmilles Stadium,Geneva,Switzerland,WC-1954,1954,1946,1930,36000,Multi-purpose,Existing,not in use,demolished 2012,replaced by successor stadium,,https://en.wikipedia.org/wiki/Charmilles_Stadium
+S-214,S-214,Stade Olympique de la Pontaise,Lausanne,Switzerland,WC-1954,1954,1946,1954,50000,Multi-purpose,New,in use,,,rebuilt 1954 for the WC (original 1904),https://en.wikipedia.org/wiki/Stade_Olympique_de_la_Pontaise
+S-215,S-215,Cornaredo Stadium,Lugano,Switzerland,WC-1954,1954,1946,1951,36000,Multi-purpose,New,in use,,,"opened 1951, Switzerland awarded 1946",https://en.wikipedia.org/wiki/Cornaredo_Stadium
+S-216,S-216,Hardturm Stadium,Zürich,Switzerland,WC-1954,1954,1946,1929,35000,Single-purpose,Existing,not in use,demolished 2008,replaced by successor stadium,,https://en.wikipedia.org/wiki/Hardturm
+S-217,S-217,Foxboro Stadium,Boston,United States,WC-1999,1999,1996,1971,59000,Multi-purpose,Existing,not in use,demolished 2002,replaced by successor stadium,,https://en.wikipedia.org/wiki/Foxboro_Stadium
+S-218,S-218,Home Depot Center,Carson,United States,WC-2003,2003,2003,2003,28000,Multi-purpose,Existing,in use,,,"tournament moved from China to the US in May 2003 (SARS); venue was an MLS project already underway, opened Jun 2003; Existing",https://en.wikipedia.org/wiki/Dignity_Health_Sports_Park
+S-219,S-219,Soldier Field,Chicago,United States,WC-1994,1994,1988,1924,65000,Multi-purpose,Existing,in use,rebuilt 2003,,"gut rebuilt 2003, colonnades kept; in use (rebuilt) per the IOC convention",https://en.wikipedia.org/wiki/Soldier_Field
+S-219,S-219,Soldier Field,Chicago,United States,WC-1999,1999,1996,1924,65000,Multi-purpose,Existing,in use,rebuilt 2003,,see the 1994 row,https://en.wikipedia.org/wiki/Soldier_Field
+S-220,S-220,Columbus Crew Stadium,Columbus,United States,WC-2003,2003,2003,1999,23000,Single-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Mapfre_Stadium
+S-221,S-221,Cotton Bowl,Dallas,United States,WC-1994,1994,1988,1930,64000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Cotton_Bowl_(stadium)
+S-222,S-222,Giants Stadium,East Rutherford,United States,WC-1994,1994,1988,1976,76000,Multi-purpose,Existing,not in use,demolished 2010,replaced by successor stadium,,https://en.wikipedia.org/wiki/Giants_Stadium
+S-217,S-223,Foxboro Stadium,Foxborough,United States,WC-1994,1994,1988,1971,54000,Multi-purpose,Existing,not in use,demolished 2002,replaced by successor stadium,,https://en.wikipedia.org/wiki/Foxboro_Stadium
+S-224,S-224,Gillette Stadium,Foxborough,United States,WC-2003,2003,2003,2002,68000,Multi-purpose,Existing,in use,,,"opened 2002, before the May 2003 emergency award; Existing",https://en.wikipedia.org/wiki/Gillette_Stadium
+S-225,S-225,Rose Bowl,Los Angeles,United States,WC-1999,1999,1996,1922,96000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Rose_Bowl_(stadium)
+S-222,S-226,Giants Stadium,New York City,United States,WC-1999,1999,1996,1976,78000,Multi-purpose,Existing,not in use,demolished 2010,replaced by successor stadium,,https://en.wikipedia.org/wiki/Giants_Stadium
+S-227,S-227,Citrus Bowl,Orlando,United States,WC-1994,1994,1988,1936,62000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Citrus_Bowl_(stadium)
+S-225,S-228,Rose Bowl,Pasadena,United States,WC-1994,1994,1988,1922,94000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Rose_Bowl_(stadium)
+S-229,S-229,Lincoln Financial Field,Philadelphia,United States,WC-2003,2003,2003,2003,70000,Multi-purpose,Existing,in use,,,"opened Aug 2003, but an NFL project underway long before the May 2003 emergency award; Existing",https://en.wikipedia.org/wiki/Lincoln_Financial_Field
+S-230,S-230,Pontiac Silverdome,Pontiac,United States,WC-1994,1994,1988,1975,78000,Multi-purpose,Existing,not in use,demolished 2017,abandoned before demolition,,https://en.wikipedia.org/wiki/Pontiac_Silverdome
+S-231,S-231,Civic Stadium,Portland,United States,WC-1999,1999,1996,1926,27000,Multi-purpose,Existing,in use,,,,"https://en.wikipedia.org/wiki/Civic_Stadium_(Portland,_Oregon)"
+S-231,S-232,PGE Park,Portland,United States,WC-2003,2003,2003,1926,28000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Providence_Park
+S-233,S-233,Stanford Stadium,San Fransisco,United States,WC-1999,1999,1996,1921,85000,Multi-purpose,Existing,in use,rebuilt 2006,,"1921 bowl demolished 2005, rebuilt on the same footprint 2006; in use (rebuilt) per the IOC convention",https://en.wikipedia.org/wiki/Stanford_Stadium
+S-234,S-234,Spartan Stadium,San Jose,United States,WC-1999,1999,1996,1933,26000,Multi-purpose,Existing,in use,,,,https://en.wikipedia.org/wiki/Spartan_Stadium_(San_Jose)
+S-233,S-235,Stanford Stadium,Stanford,United States,WC-1994,1994,1988,1921,84000,Multi-purpose,Existing,in use,rebuilt 2006,,see the 1999 row,https://en.wikipedia.org/wiki/Stanford_Stadium
+S-236,S-236,Jack Kent Cooke Stadium,"Washington, D.C.",United States,WC-1999,1999,1996,1997,80000,Multi-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Jack_Kent_Cooke_Stadium
+S-237,S-237,RFK Stadium,"Washington, D.C.",United States,WC-1994,1994,1988,1961,53000,Multi-purpose,Existing,not in use,demolished 2023,abandoned before demolition,,https://en.wikipedia.org/wiki/Robert_F._Kennedy_Memorial_Stadium
+S-237,S-237,RFK Stadium,"Washington, D.C.",United States,WC-2003,2003,2003,1961,53000,Multi-purpose,Existing,not in use,demolished 2023,abandoned before demolition,,https://en.wikipedia.org/wiki/Robert_F._Kennedy_Memorial_Stadium
+S-238,S-238,Estadio Centenario,Montevideo,Uruguay,WC-1930,1930,1929,1930,90000,Single-purpose,New,in use,,,,https://en.wikipedia.org/wiki/Estadio_Centenario
+S-239,S-239,Estadio Gran Parque Central,Montevideo,Uruguay,WC-1930,1930,1929,1900,20000,Single-purpose,Existing,in use,,,opened 1900; the 1947 date in the wikidata pull is a renovation,https://en.wikipedia.org/wiki/Estadio_Gran_Parque_Central
+S-240,S-240,Estadio Pocitos,Montevideo,Uruguay,WC-1930,1930,1929,1921,10000,Multi-purpose,Existing,not in use,demolished ~1940,urban redevelopment,,https://en.wikipedia.org/wiki/Estadio_Pocitos
