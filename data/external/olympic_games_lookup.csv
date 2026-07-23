@@ -1,0 +1,54 @@
+games_year,host_city,host_country,award_year,precision
+1896,Athens,Greece,1894,exact
+1900,Paris,France,1894,exact
+1904,St. Louis,United States,1903,approximate
+1908,London,United Kingdom,1906,approximate
+1912,Stockholm,Sweden,1909,exact
+1920,Antwerp,Belgium,1914,exact
+1924,Paris,France,1921,exact
+1928,Amsterdam,Netherlands,1921,exact
+1932,Los Angeles,United States,1923,exact
+1936,Berlin,Germany,1931,exact
+1948,London,United Kingdom,1946,exact
+1952,Helsinki,Finland,1947,exact
+1956,Melbourne / Stockholm,Australia,1949,exact
+1960,Rome,Italy,1955,exact
+1964,Tokyo,Japan,1959,exact
+1968,Mexico City,Mexico,1963,exact
+1972,Munich,West Germany,1966,exact
+1976,Montreal,Canada,1970,exact
+1980,Moscow,Soviet Union,1974,exact
+1984,Los Angeles,United States,1978,exact
+1988,Seoul,South Korea,1981,exact
+1992,Barcelona,Spain,1986,exact
+1996,Atlanta,United States,1990,exact
+2000,Sydney,Australia,1993,exact
+2004,Athens,Greece,1997,exact
+2008,Beijing,China,2001,exact
+2012,London,United Kingdom,2005,exact
+2016,Rio de Janeiro,Brazil,2009,exact
+2020,Tokyo,Japan,2013,exact
+2022,Beijing,China,2015,exact
+1924,Chamonix,France,1922,approximate
+1928,St. Moritz,Switzerland,1926,exact
+1932,Lake Placid,United States,1929,exact
+1936,Garmisch-Partenkirchen,Germany,1933,exact
+1948,St. Moritz,Switzerland,1946,exact
+1952,Oslo,Norway,1947,exact
+1956,Cortina d’Ampezzo,Italy,1949,exact
+1960,Squaw Valley,United States,1955,exact
+1964,Innsbruck,Austria,1959,exact
+1968,Grenoble,France,1964,exact
+1972,Sapporo,Japan,1966,exact
+1976,Innsbruck,Austria,1973,approximate
+1980,Lake Placid,United States,1974,exact
+1984,Sarajevo,Yugoslavia,1978,exact
+1988,Calgary,Canada,1981,exact
+1992,Albertville,France,1986,exact
+1994,Lillehammer,Norway,1988,exact
+1998,Nagano,Japan,1991,exact
+2002,Salt Lake City,United States,1995,exact
+2006,Torino,Italy,1999,exact
+2010,Vancouver,Canada,2003,exact
+2014,Sochi,Russia,2007,exact
+2018,PyeongChang,South Korea,2011,exact
