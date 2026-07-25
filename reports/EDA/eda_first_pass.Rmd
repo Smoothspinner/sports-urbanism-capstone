@@ -1,0 +1,165 @@
+---
+title: "EDA of Sporting Event Venues"
+output: html_document
+date: "2026-07-24"
+---
+
+```{r}
+# read joined data (joins done in source/data)
+wc_data <- read.csv("../../data/processed/worldcup_stadiums_joined.csv")
+oly_data <- read.csv("../../data/processed/olympic_venues_joined.csv")
+
+dim(wc_data)   # 265 WC venues
+dim(oly_data)  # 983 Olympic venues
+```
+
+```{r}
+# clean + group the Olympic status text into 3 states (match on the leading words)
+s <- tolower(trimws(oly_data$current_status))
+oly_data$status_group <- ifelse(startsWith(s, "dismantled"), "dismantled",
+                         ifelse(startsWith(s, "not in use"), "not in use",
+                         ifelse(startsWith(s, "in use"), "in use", NA)))
+table(oly_data$status_group, useNA = "ifany")
+
+# same for the New / Existing / Temporary / Mixed classification
+b <- tolower(trimws(oly_data$venue_classification))
+oly_data$build_group <- ifelse(startsWith(b, "existing"), "Existing",
+                        ifelse(startsWith(b, "temporary"), "Temporary",
+                        ifelse(startsWith(b, "mixed"), "Mixed",
+                        ifelse(startsWith(b, "new"), "New", NA))))
+table(oly_data$build_group, useNA = "ifany")
+```
+
+```{r}
+# map host countries to regions
+region_map <- c(
+  "France" = "Western Europe", "Germany" = "Western Europe", "West Germany" = "Western Europe",
+  "Netherlands" = "Western Europe", "Belgium" = "Western Europe", "Switzerland" = "Western Europe",
+  "Austria" = "Western Europe", "England" = "Western Europe", "United Kingdom" = "Western Europe",
+  "Italy" = "Southern Europe", "Spain" = "Southern Europe", "Greece" = "Southern Europe",
+  "Yugoslavia" = "Southern Europe",
+  "Sweden" = "Northern Europe", "Norway" = "Northern Europe", "Finland" = "Northern Europe",
+  "Russia" = "Eastern Europe", "Soviet Union" = "Eastern Europe",
+  "United States" = "North America", "Canada" = "North America", "Mexico" = "North America",
+  "Brazil" = "South America", "Argentina" = "South America", "Uruguay" = "South America",
+  "Chile" = "South America",
+  "Japan" = "East Asia", "China" = "East Asia", "South Korea" = "East Asia",
+  "Australia" = "Oceania", "South Africa" = "Africa", "Qatar" = "Middle East")
+
+wc_data$region <- region_map[wc_data$country_name]
+oly_data$region <- region_map[oly_data$host_country]
+
+# check every country got a region (no TRUE)
+table(is.na(wc_data$region))
+table(is.na(oly_data$region))
+```
+
+```{r}
+# era buckets by event year
+wc_data$era <- factor(ifelse(wc_data$tournament_year <= 1945, "pre-WWII",
+                      ifelse(wc_data$tournament_year <= 2000, "postwar", "recent")),
+                      levels = c("pre-WWII", "postwar", "recent"))
+oly_data$era <- factor(ifelse(oly_data$games_year <= 1945, "pre-WWII",
+                       ifelse(oly_data$games_year <= 2000, "postwar", "recent")),
+                       levels = c("pre-WWII", "postwar", "recent"))
+```
+
+## Descriptive statistics for continuous variables
+
+```{r}
+# continuous summary stats, plus spread (sd)
+wc_num <- c("stadium_capacity", "gdp_per_capita", "city_pop_thousands", "opened_year", "tournament_year")
+summary(wc_data[, wc_num])
+round(sapply(wc_data[, wc_num], sd, na.rm = TRUE))
+```
+
+```{r}
+# Olympic side: fewer numeric vars (no capacity)
+oly_num <- c("gdp_per_capita", "city_pop_thousands", "games_year")
+summary(oly_data[, oly_num])
+round(sapply(oly_data[, oly_num], sd, na.rm = TRUE))
+```
+
+## Descriptive statistics for categorical variables
+
+```{r}
+# WC categorical: counts + proportions
+table(wc_data$newly_built);    round(table(wc_data$newly_built) / sum(table(wc_data$newly_built)), 3)
+table(wc_data$design_purpose); round(table(wc_data$design_purpose) / sum(table(wc_data$design_purpose)), 3)
+table(wc_data$current_status); round(table(wc_data$current_status) / sum(table(wc_data$current_status)), 3)
+table(wc_data$region)
+table(wc_data$era)
+```
+
+```{r}
+# Olympic categorical
+table(oly_data$build_group);  round(table(oly_data$build_group) / sum(table(oly_data$build_group)), 3)
+table(oly_data$status_group); round(table(oly_data$status_group) / sum(table(oly_data$status_group)), 3)
+table(oly_data$region)
+table(oly_data$era)
+```
+
+```{r}
+# closure reason recorded on WC side only
+table(wc_data$not_in_use_reason)
+```
+
+## Region by era
+
+```{r}
+# region x era spread (matters for edition split)
+table(wc_data$region, wc_data$era)
+table(oly_data$region, oly_data$era)
+```
+
+## Missingness
+
+```{r}
+# missing values in country joins (not imputing yet)
+colSums(is.na(wc_data[, c("gdp_per_capita", "cpi_score", "city_pop_thousands", "stadium_capacity", "opened_year")]))
+colSums(is.na(oly_data[, c("gdp_per_capita", "cpi_score", "city_pop_thousands")]))
+```
+
+## Figures
+
+```{r}
+# WC venues by region
+barplot(table(wc_data$region), las = 2, cex.names = 0.7,
+        main = "World Cup venues by region", ylab = "venues")
+```
+
+```{r}
+# venues by era, both events
+era_both <- rbind(WorldCup = table(wc_data$era), Olympic = table(oly_data$era))
+barplot(era_both, beside = TRUE, legend = TRUE,
+        main = "Venues by era", ylab = "venues")
+```
+
+```{r}
+# WC capacity distribution
+hist(wc_data$stadium_capacity, breaks = 30,
+     main = "World Cup stadium capacity", xlab = "capacity (seats)")
+```
+
+```{r}
+# GDP per capita, both events (log scale)
+boxplot(wc_data$gdp_per_capita, oly_data$gdp_per_capita,
+        names = c("World Cup", "Olympic"), log = "y",
+        main = "Host GDP per capita at award year", ylab = "GDP per capita (log scale)")
+```
+
+```{r}
+# newly-built vs current use (WC): share not in use, by build status
+use_tab <- table(wc_data$newly_built, wc_data$current_status)
+share_notinuse <- use_tab[, "not in use"] / rowSums(use_tab)
+barplot(share_notinuse, ylim = c(0, 0.2),
+        main = "World Cup: share not in use, by build status",
+        xlab = "newly built", ylab = "share not in use")
+```
+
+## Collinearity
+
+```{r}
+# correlation matrix of the WC numeric predictors (no pair above 0.7)
+round(cor(wc_data[, wc_num], use = "pairwise.complete.obs"), 2)
+```
