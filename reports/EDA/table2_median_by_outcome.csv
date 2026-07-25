@@ -1,0 +1,6 @@
+dataset,variable,In_use,Left_unused
+World Cup,city_pop_thousands,874.8,1236.8
+World Cup,gdp_per_capita,10675,4963.7
+World Cup,stadium_capacity,44000,40000
+Olympics,city_pop_thousands,2814.7,3025.9
+Olympics,gdp_per_capita,9101.2,12697.5

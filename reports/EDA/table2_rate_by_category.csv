@@ -1,0 +1,9 @@
+dataset,variable,level,n,we_rate_pct
+World Cup,design_purpose,Multi-purpose,137,11.7
+World Cup,design_purpose,Single-purpose,128,8.6
+World Cup,newly_built,Existing,171,14.6
+World Cup,newly_built,New,94,2.1
+Olympics,class_group,Existing,473,16.7
+Olympics,class_group,Mixed,9,11.1
+Olympics,class_group,New,387,11.1
+Olympics,class_group,Temporary,11,0

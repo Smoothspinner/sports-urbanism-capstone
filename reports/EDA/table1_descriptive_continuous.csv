@@ -1,0 +1,12 @@
+dataset,variable,n,mean,sd,median,min,max,skew
+World Cup,award_year,265,1982.7,24.5,1988,1929,2015,-0.61
+World Cup,city_pop_thousands,256,2692.3,4520.2,918.6,50.4,29438.3,3.01
+World Cup,cpi_score,9,70,0,70,70,70,NA
+World Cup,gdp_per_capita,216,18272,18990.9,10675,284,77387.3,1.25
+World Cup,opened_year,264,1962.8,36.2,1961,1892,2022,0.01
+World Cup,stadium_capacity,265,47883,24655.9,44000,5000,200000,2.01
+Olympics,award_year,983,1970.5,31.7,1978,1894,2015,-0.63
+Olympics,city_pop_thousands,853,6599.5,8153.6,3025.9,56.2,32885.5,1.94
+Olympics,cpi_score,59,64,16.6,74,37,74,-1
+Olympics,games_year,983,1976.3,32.7,1984,1896,2022,-0.62
+Olympics,gdp_per_capita,607,14623.7,13240.5,10564.9,419.6,42240.2,0.87

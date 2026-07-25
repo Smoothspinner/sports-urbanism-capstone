@@ -1,0 +1,12 @@
+dataset,variable,level,n,percent
+World Cup,design_purpose,Multi-purpose,137,51.7
+World Cup,design_purpose,Single-purpose,128,48.3
+World Cup,newly_built,Existing,171,64.5
+World Cup,newly_built,New,94,35.5
+Olympics,class_group,Existing,473,48.1
+Olympics,class_group,Mixed,9,0.9
+Olympics,class_group,New,388,39.5
+Olympics,class_group,Temporary,113,11.5
+Olympics,status_group,in use,757,77
+Olympics,status_group,not in use,123,12.5
+Olympics,status_group,temporary,103,10.5
