@@ -180,3 +180,9 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 .DS_Store
+
+# R
+.Rhistory
+.RData
+# knitted report output (regenerate by knitting the .Rmd)
+reports/EDA/*.html
