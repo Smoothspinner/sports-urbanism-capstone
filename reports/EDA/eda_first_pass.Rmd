@@ -157,6 +157,46 @@ barplot(share_notinuse, ylim = c(0, 0.2),
         xlab = "newly built", ylab = "share not in use")
 ```
 
+## The 123 not-in-use Olympic venues
+
+```{r}
+# the six ways "not in use" is written in the IOC data
+oly_ni <- oly_data[oly_data$status_group == "not in use", ]
+table(oly_ni$current_status)
+
+# two of those six say demolished, so split the 123 on those
+dem_values <- c("Not in use (demolished)", "Not in use\n(demolished)")
+demolished <- oly_ni$current_status %in% dem_values
+table(demolished)
+
+# the ones still standing: which Games are they from, and what were they?
+standing <- oly_ni[!demolished, ]
+standing$games <- paste(standing$host_city, standing$games_year)
+sort(table(standing$games), decreasing = TRUE)[1:5]
+table(standing$build_group[standing$games_year == 2004])
+```
+
+## Duplicate records
+
+```{r}
+# no fully duplicated rows on either side (row count = distinct row count)
+nrow(wc_data) - nrow(unique(wc_data))
+nrow(oly_data) - nrow(unique(oly_data))
+
+# WC: stadium + tournament year is a unique key; 265 rows are 238 distinct stadiums
+nrow(wc_data) - nrow(unique(wc_data[, c("stadium_id", "tournament_year")]))
+length(unique(wc_data$stadium_id))
+
+# Olympic: venue name + games year is NOT unique. Three keys appear twice.
+oly_key <- paste(oly_data$venue_name, oly_data$games_year)
+key_counts <- table(oly_key)
+key_counts[key_counts > 1]
+
+# the one that matters: two Minor Arena rows that disagree about the outcome
+oly_data[oly_data$venue_name == "Minor Arena",
+         c("venue_name", "games_year", "host_city", "current_status")]
+```
+
 ## Collinearity
 
 ```{r}
