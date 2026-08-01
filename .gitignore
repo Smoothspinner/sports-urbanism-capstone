@@ -186,3 +186,4 @@ cython_debug/
 .RData
 # knitted report output (regenerate by knitting the .Rmd)
 reports/EDA/*.html
+data/external/olympic_wiki_titles.csv
