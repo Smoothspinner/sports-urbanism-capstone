@@ -1,7 +1,5 @@
-# Missing-value handling on the split tables. For each key predictor: add a 0/1
-# missing flag, then impute NAs with the TRAINING median (train only, applied to
-# both sets, so no leakage). Flags keep the "was it measured" signal. CPI is
-# dropped as a predictor (94-96% missing) rather than imputed.
+# Adds a missing flag and a median-imputed column for each key predictor.
+# Medians come from the training set only (no leakage). CPI excluded (mostly missing).
 
 library(tidyverse)
 
@@ -22,7 +20,7 @@ wc <- read_csv("data/processed/worldcup_model_split.csv", show_col_types = FALSE
 ol <- read_csv("data/processed/olympic_model_split.csv", show_col_types = FALSE) |>
   add_flags_impute(num_vars)
 
-# ---- Check: flags count the gaps, and no NA remains in the imputed columns ----
+# ---- Missing counts and post-imputation NA check ----
 cat("World Cup, number missing per predictor:\n")
 print(wc |> summarise(across(ends_with("_missing"), sum)))
 cat("NAs left in WC imputed columns:", sum(is.na(select(wc, ends_with("_imp")))), "\n\n")
