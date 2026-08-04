@@ -1,7 +1,7 @@
 # Hand-built lookup: one row per Olympic Games edition (summer + winter,
 # 1896-2022), giving the host country and the year the Games were AWARDED.
 # This is the Olympic-side twin of 03_award_years.R. It is keyed to the exact
-# "Games Year" + "Host City" strings in Brian's VenueReportsV2.xlsx ("At A
+# "Games Year" + "Host City" strings in Brian's VenueReportsV3.xlsx ("At A
 # Glance" sheet) so 06_join_olympic_data.R can join on those two columns.
 #
 # Award year = the year the IOC session elected the host (the Olympic analogue

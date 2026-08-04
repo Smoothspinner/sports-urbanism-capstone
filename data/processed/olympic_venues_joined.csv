@@ -208,7 +208,7 @@ Sportpark",Existing,"Football, hockey",Not in use (demolished),1928,Amsterdam,Ne
 Zeeburg Rifle Range,Existing,"Modern pentathlon
 (shooting)",Not in use (demolished),1928,Amsterdam,Netherlands,1921,exact,NLD,NA,NA,931.822,1975,54
 Sloten Canal,Existing,Rowing,In use,1928,Amsterdam,Netherlands,1921,exact,NLD,NA,NA,931.822,1975,54
-Zuiderzee,Existing,Sailing,Not in use,1928,Amsterdam,Netherlands,1921,exact,NLD,NA,NA,931.822,1975,54
+Zuiderzee,Existing,Sailing,Not in use (demolished),1928,Amsterdam,Netherlands,1921,exact,NLD,NA,NA,931.822,1975,54
 Buiten-IJ,Existing,Sailing,In use,1928,Amsterdam,Netherlands,1921,exact,NLD,NA,NA,931.822,1975,54
 "Amsterdam Olympic
 Stadium",New build,"Equestrian (jumping),
@@ -261,7 +261,7 @@ Inglewood area,Temporary,Marathon,Dismantled (temporary),1932,Los Angeles,United
 "Los Angeles Olympic
 Village",Temporary,Athlete accommodation,Dismantled (temporary),1932,Los Angeles,United States,1923,exact,USA,NA,NA,7717.837,1975,52
 Grünau Regatta Course,Existing,"Rowing, canoe sprint",In use,1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
-Avus Motor Road,Existing,"Athletics, cycling (road)",Not in use,1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
+Avus Motor Road,Existing,"Athletics, cycling (road)",In use (repurposed),1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
 "Mommsen Stadium
 (Mommsenstadion)",Existing,Football,In use,1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
 "Post Stadium
@@ -273,16 +273,13 @@ Wannsee",Existing,Shooting,In use,1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.
 "Tennis Courts and Tennis
 Stadium",Existing,"Basketball, fencing",In use,1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
 "Police Stadium
-(Polizeistadion)",Existing,Handball,"Not in use
-(demolished)",1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
+(Polizeistadion)",Existing,Handball,Not in use (demolished),1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
 "Stadion am
 Gesundbrunnen
-(Herta-BSC ground)",Existing,Football,"Not in use
-(demolished)",1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
+(Herta-BSC ground)",Existing,Football,Not in use (demolished),1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
 "Shooting Ranges
 at Ruhleben",Existing,"Modern pentathlon
-(shooting)","Not in use
-(demolished)",1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
+(shooting)",Not in use (demolished),1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
 "Gymnasium and Cupola
 Hall (Haus des Deutschen
 Sports)",New build,"Fencing, modern
@@ -302,17 +299,15 @@ Swimming Stadium",New build,"Swimming, diving, water
 polo, modern pentathlon
 (swimming)",In use,1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
 Deutschlandhalle,New build,"Boxing, wrestling,
-weightlifting","Not in use
-(demolished)",1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
-Berlin Olympic Village,New build,Athlete accommodation,Not in use,1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
+weightlifting",Not in use (demolished),1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
+Berlin Olympic Village,New build,Athlete accommodation,Not in use (demolished),1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
 "Cycling Stadium
 (Olympia-Radstadion)",Temporary,Cycling (track),Dismantled (temporary),1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
 Kiel Bay,Existing,Sailing,In use,1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
 "Döberitz Military Drill
 Grounds",Existing,"Modern pentathlon
 (equestrian), equestrian
-(cross-country)","Not in use
-(demolished)",1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
+(cross-country)",Not in use (demolished),1936,Berlin,Germany,1931,exact,DEU,NA,NA,3025.918,1975,44
 "Empire Stadium
 (Wembley)",Existing,"Athletics, Opening and
 Closing Ceremonies",In use (rebuilt),1948,London,United Kingdom,1946,exact,GBR,NA,NA,7369.842,1975,29
@@ -328,7 +323,7 @@ Finchley Pool,Existing,Water polo,In use (rebuilt),1948,London,United Kingdom,19
 White Hart Lane,Existing,Football,In use (rebuilt),1948,London,United Kingdom,1946,exact,GBR,NA,NA,7369.842,1975,29
 Empire Pool,Existing,"Swimming, diving, water
 polo, boxing",In use (repurposed),1948,London,United Kingdom,1946,exact,GBR,NA,NA,7369.842,1975,29
-Griffin Park,Existing,Football,Not in use,1948,London,United Kingdom,1946,exact,GBR,NA,NA,7369.842,1975,29
+Griffin Park,Existing,Football,Not in use (demolished),1948,London,United Kingdom,1946,exact,GBR,NA,NA,7369.842,1975,29
 "Guinness Sports Ground,
 Park Royal",Existing,Field hockey,Not in use (demolished),1948,London,United Kingdom,1946,exact,GBR,NA,NA,7369.842,1975,29
 Empress Hall (Earl’s Court),Existing,"Boxing, wrestling,
@@ -377,7 +372,7 @@ Ceremonies",In use,1952,Helsinki,Finland,1947,exact,FIN,NA,NA,268.059,1975,28
 Olympic Stadium",Existing,Football,In use,1952,Helsinki,Finland,1947,exact,FIN,NA,NA,268.059,1975,28
 Taivallahti,Existing,Canoe sprint,In use,1952,Helsinki,Finland,1947,exact,FIN,NA,NA,268.059,1975,28
 Tennis Palace,Existing,Basketball,In use (repurposed),1952,Helsinki,Finland,1947,exact,FIN,NA,NA,268.059,1975,28
-Huopalahti,Existing,Shooting,Not in use,1952,Helsinki,Finland,1947,exact,FIN,NA,NA,268.059,1975,28
+Huopalahti,Existing,Shooting,In use (repurposed),1952,Helsinki,Finland,1947,exact,FIN,NA,NA,268.059,1975,28
 "Around Harmaja Island
 (lighthouse) and
 Liuskasaari Island",Existing,Sailing,In use,1952,Helsinki,Finland,1947,exact,FIN,NA,NA,268.059,1975,28
@@ -466,9 +461,9 @@ Stadium",New build,"Swimming, diving, water
 polo, modern pentathlon
 (swimming)",In use,1960,Rome,Italy,1955,exact,ITA,NA,NA,1938.676,1975,20
 Piscina delle Rose,New build,Water polo,In use,1960,Rome,Italy,1955,exact,ITA,NA,NA,1938.676,1975,20
-Flaminio Stadium,New build,Football,Not in use,1960,Rome,Italy,1955,exact,ITA,NA,NA,1938.676,1975,20
+Flaminio Stadium,New build,Football,Not in use (reconstruction),1960,Rome,Italy,1955,exact,ITA,NA,NA,1938.676,1975,20
 Sports Palace,New build,"Basketball, boxing",In use,1960,Rome,Italy,1955,exact,ITA,NA,NA,1938.676,1975,20
-Small Sports Palace,New build,"Basketball, weightlifting",Not in use,1960,Rome,Italy,1955,exact,ITA,NA,NA,1938.676,1975,20
+Small Sports Palace,New build,"Basketball, weightlifting",Not in use (reconstruction),1960,Rome,Italy,1955,exact,ITA,NA,NA,1938.676,1975,20
 "Rome Olympic
 Velodrome",New build,"Cycling (track), hockey",Not in use (demolished),1960,Rome,Italy,1955,exact,ITA,NA,NA,1938.676,1975,20
 Cesano Shooting Range,New build,Shooting,Not in use (demolished),1960,Rome,Italy,1955,exact,ITA,NA,NA,1938.676,1975,20
@@ -703,7 +698,7 @@ pentathlon (equestrian)",In use,1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,NA,
 (OlimpiyskiySports
 Complex)",New build,"Swimming, diving, water
 polo, modern pentathlon
-(swimming)",Not in use,1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,NA,NA,NA
+(swimming)",Not in use (demolished),1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,NA,NA,NA
 Olympic Velodrome,New build,Cycling (track),In use,1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,NA,NA,NA
 "Druzhba Multi-Purpose
 Arena",New build,Volleyball,In use,1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,NA,NA,NA
@@ -711,7 +706,7 @@ Arena",New build,Volleyball,In use,1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,
 of Sports",New build,Handball,In use,1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,NA,NA,NA
 "Krylatskoye Cycling
 Circuit",New build,Cycling (road),In use,1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,NA,NA,NA
-Indoor Stadium,New build,"Basketball, boxing",Not in use,1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,NA,NA,NA
+Indoor Stadium,New build,"Basketball, boxing",Not in use (demolished),1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,NA,NA,NA
 Wrestling Hall,New build,Wrestling,In use,1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,NA,NA,NA
 Fencing Hall,New build,"Fencing, modern
 pentathlon (fencing)",In use,1980,Moscow,Soviet Union,1974,exact,NA,NA,NA,NA,NA,NA
@@ -771,7 +766,7 @@ Lake Casitas,Temporary,"Rowing, canoe sprint",Dismantled (temporary),1984,Los An
 Olympic Stadium,Existing,"Athletics, football,
 equestrian (jumping),
 Opening and Closing
-Ceremonies",Not in use,1988,Seoul,South Korea,1981,exact,KOR,1918.41779613494,NA,12619.275,1981,0
+Ceremonies",Dismantled (temporary),1988,Seoul,South Korea,1981,exact,KOR,1918.41779613494,NA,12619.275,1981,0
 "Jamsil Indoor
 Swimming Pool",Existing,"Diving, water polo",In use,1988,Seoul,South Korea,1981,exact,KOR,1918.41779613494,NA,12619.275,1981,0
 Jamsil Gymnasium,Existing,Volleyball,In use,1988,Seoul,South Korea,1981,exact,KOR,1918.41779613494,NA,12619.275,1981,0
@@ -842,7 +837,7 @@ Palau de la Metal-lúrgia,Existing,"Fencing, modern
 pentathlon (fencing)",In use,1992,Barcelona,Spain,1986,exact,ESP,6508.8506547565,NA,2433.362,1986,0
 "Palau d’Esports,
 Barcelona",Existing,"Rhythmic gymnastics,
-volleyball",Not in use,1992,Barcelona,Spain,1986,exact,ESP,6508.8506547565,NA,2433.362,1986,0
+volleyball",In use (repurposed),1992,Barcelona,Spain,1986,exact,ESP,6508.8506547565,NA,2433.362,1986,0
 "RCD Espanyol Stadium
 (Estadi de Sarrià)",Existing,Football,Not in use (demolished),1992,Barcelona,Spain,1986,exact,ESP,6508.8506547565,NA,2433.362,1986,0
 Palau Sant Jordi,New build,"Artistic gymnastics,
@@ -908,7 +903,7 @@ Georgia Dome,Existing,"Artistic gymnastics,
 basketball, handball",Not in use (demolished),1996,Atlanta,United States,1990,exact,USA,23888.6000088133,NA,56.211,1995,5
 Omni Coliseum,Existing,Volleyball,In use (rebuilt),1996,Atlanta,United States,1990,exact,USA,23888.6000088133,NA,56.211,1995,5
 "Alonzo Herndon
-Stadium",Existing,Hockey,Not in use,1996,Atlanta,United States,1990,exact,USA,23888.6000088133,NA,56.211,1995,5
+Stadium",Existing,Hockey,Not in use (demolished),1996,Atlanta,United States,1990,exact,USA,23888.6000088133,NA,56.211,1995,5
 "Atlanta Fulton County
 Stadium",Existing,Baseball,Not in use (demolished),1996,Atlanta,United States,1990,exact,USA,23888.6000088133,NA,56.211,1995,5
 Atlanta Olympic Village,"Mixed:
@@ -1011,7 +1006,7 @@ trampoline gymnastics,
 basketball",In use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
 Olympic Stadium,Existing,"Athletics, football,
 Opening and Closing
-Ceremonies",Not in use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
+Ceremonies",Dismantled (temporary),2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
 Olympic Aquatics Centre,Existing,"Swimming, diving, artistic
 swimming, water polo",In use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
 "Peace and Friendship
@@ -1040,20 +1035,20 @@ Shooting Centre",New build,Shooting,In use,2004,Athens,Greece,1997,exact,GRC,130
 Sports Pavilion,New build,"Handball, taekwondo",In use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
 "Peristeri Olympic
 Boxing Hall",New build,Boxing,In use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
-Olympic Hockey Centre,New build,Hockey,Not in use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
+Olympic Hockey Centre,New build,Hockey,Not in use (demolished),2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
 "Olympic Canoe/Kayak
-Slalom Centre",New build,Canoe slalom,Not in use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
+Slalom Centre",New build,Canoe slalom,Not in use (demolished),2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
 Goudi Olympic Hall,New build,"Badminton, modern
 pentathlon (shooting,
-fencing)",Not in use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
-Helliniko Indoor Arena,New build,Basketball,Not in use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
+fencing)",Not in use (demolished),2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
+Helliniko Indoor Arena,New build,Basketball,Not in use (demolished),2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
 "Nikaia Olympic
-Weightlifting Hall",New build,Weightlifting,Not in use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
-Olympic Baseball Centre,New build,Baseball,Not in use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
+Weightlifting Hall",New build,Weightlifting,Not in use (demolished),2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
+Olympic Baseball Centre,New build,Baseball,Not in use (demolished),2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
 "Olympic Beach
-Volleyball Centre",New build,Beach volleyball,Not in use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
+Volleyball Centre",New build,Beach volleyball,Not in use (demolished),2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
 "Olympic Softball
-Stadium",New build,Softball,Not in use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
+Stadium",New build,Softball,Not in use (demolished),2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
 Olympic Village,New build,Athlete accommodation,In use,2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
 "Vouliagmeni Olympic
 Centre",Temporary,"Cycling (road), triathlon",Dismantled (temporary),2004,Athens,Greece,1997,exact,GRC,13015.9175046854,NA,3278.09,1997,0
@@ -1239,7 +1234,7 @@ Rio Olympic Golf Course,New build,Golf,In use,2016,Rio de Janeiro,Brazil,2009,ex
 Youth Arena,New build,"Basketball, modern
 pentathlon (fencing)",In use,2016,Rio de Janeiro,Brazil,2009,exact,BRA,8678.6592244676,NA,8926.759,2009,0
 Rio Olympic BMX Centre,New build,Cycling BMX,In use,2016,Rio de Janeiro,Brazil,2009,exact,BRA,8678.6592244676,NA,8926.759,2009,0
-Rio Olympic Village,New build,Athlete accommodation,Not in use,2016,Rio de Janeiro,Brazil,2009,exact,BRA,8678.6592244676,NA,8926.759,2009,0
+Rio Olympic Village,New build,Athlete accommodation,In use (repurposed),2016,Rio de Janeiro,Brazil,2009,exact,BRA,8678.6592244676,NA,8926.759,2009,0
 Future Arena,Temporary,Handball,Dismantled (temporary),2016,Rio de Janeiro,Brazil,2009,exact,BRA,8678.6592244676,NA,8926.759,2009,0
 Mountain Bike Centre,Temporary,Mountain bike,In use,2016,Rio de Janeiro,Brazil,2009,exact,BRA,8678.6592244676,NA,8926.759,2009,0
 "Rio Olympic Aquatics
@@ -1357,7 +1352,7 @@ Olympic Stadium",Temporary,"Opening and Closing
 Ceremonies",Dismantled (temporary),2018,PyeongChang,South Korea,2011,exact,KOR,26175.2398553363,NA,NA,NA,NA
 "Gangneung Curling
 Centre",Existing,Curling,In use,2018,PyeongChang,South Korea,2011,exact,KOR,26175.2398553363,NA,NA,NA,NA
-Gangneung Oval,New build,Speed skating,Not in use,2018,PyeongChang,South Korea,2011,exact,KOR,26175.2398553363,NA,NA,NA,NA
+Gangneung Oval,New build,Speed skating,In use (repurposed),2018,PyeongChang,South Korea,2011,exact,KOR,26175.2398553363,NA,NA,NA,NA
 Gangneung Ice Arena,New build,Figure skating,In use,2018,PyeongChang,South Korea,2011,exact,KOR,26175.2398553363,NA,NA,NA,NA
 "Gangneung Hockey
 Centre",New build,Ice hockey,In use,2018,PyeongChang,South Korea,2011,exact,KOR,26175.2398553363,NA,NA,NA,NA
@@ -1374,7 +1369,7 @@ Alpensia Cross-Country Centre,Existing,"Cross-country skiing,
 Nordic combined",In use,2018,PyeongChang,South Korea,2011,exact,KOR,26175.2398553363,NA,NA,NA,NA
 Alpensia Biathlon Centre,Existing,Biathlon,In use,2018,PyeongChang,South Korea,2011,exact,KOR,26175.2398553363,NA,NA,NA,NA
 Jeongseon Alpine Centre,New build,"Alpine skiing (downhill,
-super G, combined)",Not in use,2018,PyeongChang,South Korea,2011,exact,KOR,26175.2398553363,NA,NA,NA,NA
+super G, combined)",Not in use (demolished),2018,PyeongChang,South Korea,2011,exact,KOR,26175.2398553363,NA,NA,NA,NA
 Rosa Khutor Alpine Centre,Existing,Alpine skiing,In use,2014,Sochi,Russia,2007,exact,RUS,9101.2392578125,NA,184.32,2007,0
 "RusSki Gorki Ski Jumping
 Centre",New build,"Ski jumping and Nordic
@@ -1432,9 +1427,9 @@ Bardonecchia,New build,Snowboard,In use,2006,Torino,Italy,1999,exact,ITA,22049.9
 Cesana San Sicario,New build,Biathlon,In use,2006,Torino,Italy,1999,exact,ITA,22049.9990620261,NA,1147.227,1999,0
 "Trampolino Olimpico
 Pragelato",New build,"Ski jumping and Nordic
-combined",Not in use,2006,Torino,Italy,1999,exact,ITA,22049.9990620261,NA,1147.227,1999,0
+combined",Dismantled (temporary),2006,Torino,Italy,1999,exact,ITA,22049.9990620261,NA,1147.227,1999,0
 Cesana Torinese,New build,"Bobsleigh, luge and
-skeleton",Not in use,2006,Torino,Italy,1999,exact,ITA,22049.9990620261,NA,1147.227,1999,0
+skeleton",In use (repurposed),2006,Torino,Italy,1999,exact,ITA,22049.9990620261,NA,1147.227,1999,0
 "Bardonecchia Olympic
 Village","Mixed new
 build/Existing",Athlete accommodation,In use,2006,Torino,Italy,1999,exact,ITA,22049.9990620261,NA,1147.227,1999,0
@@ -1480,7 +1475,7 @@ Higashidate",Existing,Alpine skiing,In use,1998,Nagano,Japan,1991,exact,JPN,3004
 "Shiga Kogen - Mount
 Yakebitai",Existing,Snowboard,In use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
 "Shiga Kogen - Kanbayashi
-Snowboard Park",Existing,Snowboard,Not in use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
+Snowboard Park",Existing,Snowboard,Not in use (demolished),1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
 "Nozawa Onsen
 Biathlon Venue",Existing,Biathlon,In use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
 Kazakoshi Park Arena,Existing,Curling,In use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
@@ -1489,13 +1484,13 @@ Nordic combined",In use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197
 "Hakuba Ski Jumping
 Stadium",New build,"Ski jumping, Nordic
 combined",In use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
-Iizuna Kogen Ski Area,Existing,Freestyle skiing,Not in use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
+Iizuna Kogen Ski Area,Existing,Freestyle skiing,Not in use (demolished),1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
 M-Wave,New build,Speed skating,In use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
 Big Hat,New build,Ice hockey,In use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
 Aqua Wing,New build,Ice hockey,In use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
 White Ring,New build,"Figure skating, short track,
 speed skating",In use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
-Spiral Track,New build,"Bobsleigh, luge",Not in use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
+Spiral Track,New build,"Bobsleigh, luge",Not in use (demolished),1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
 "Nagano Olmpic
 Stadium",New build,"Opening and Closing
 Ceremonies",In use,1998,Nagano,Japan,1991,exact,JPN,30048.1401766828,NA,197.95,1991,0
@@ -1566,8 +1561,7 @@ track speed skating",In use,1992,Albertville,France,1986,exact,FRA,13430.4824599
 "Olympic Stadium
 (Théâtre des
 Cérémonies)",Temporary,"Opening and Closing
-Ceremonies","Dismantled
-(temporary)",1992,Albertville,France,1986,exact,FRA,13430.4824599685,NA,NA,NA,NA
+Ceremonies",Dismantled (temporary),1992,Albertville,France,1986,exact,FRA,13430.4824599685,NA,NA,NA,NA
 "Les Ménuires - Slalom
 Stadium (Stade de Slalom)",Existing,Alpine skiing,In use,1992,Albertville,France,1986,exact,FRA,13430.4824599685,NA,NA,NA,NA
 "Méribel - Massif du Roc
@@ -1579,11 +1573,10 @@ Park - Freestyle Area",New build,Freestyle skiing,In use,1988,Calgary,Canada,198
 "Canada Olympic
 Park - Ski Jumps",New build,"Nordic combined,
 ski jumping,
-freestyle skiing","Not in use, partly
-dismantled",1988,Calgary,Canada,1981,exact,CAN,12379.0368643833,NA,124.337,1985,4
+freestyle skiing",In use (repurposed),1988,Calgary,Canada,1981,exact,CAN,12379.0368643833,NA,124.337,1985,4
 "Canada Olympic
 Park - Bobsleigh
-and Luge track",New build,"Bobsleigh, luge",Not in use,1988,Calgary,Canada,1981,exact,CAN,12379.0368643833,NA,124.337,1985,4
+and Luge track",New build,"Bobsleigh, luge",Dismantled (temporary),1988,Calgary,Canada,1981,exact,CAN,12379.0368643833,NA,124.337,1985,4
 "Father David Bauer Olympic
 Arena",New build,"Ice hockey, figure skating",In use,1988,Calgary,Canada,1981,exact,CAN,12379.0368643833,NA,124.337,1985,4
 Nakiska Ski Area,New build,"Alpine skiing,
@@ -1596,9 +1589,7 @@ Village",Temporary,Athlete accommodation,Dismantled (temporary),1988,Calgary,Can
 Max Bell Arena,Existing,"Curling, short track speed
 skating",In use,1988,Calgary,Canada,1981,exact,CAN,12379.0368643833,NA,124.337,1985,4
 Stampede Corral,Existing,"Ice hockey, figure
-skating","Not in use,
-currently under
-reconstruction",1988,Calgary,Canada,1981,exact,CAN,12379.0368643833,NA,124.337,1985,4
+skating",Not in use (reconstruction),1988,Calgary,Canada,1981,exact,CAN,12379.0368643833,NA,124.337,1985,4
 "McMahon
 Stadium",Existing,"Opening and Closing
 Ceremonies",In use,1988,Calgary,Canada,1981,exact,CAN,12379.0368643833,NA,124.337,1985,4
@@ -1613,7 +1604,7 @@ Nordic combined",In use,1984,Sarajevo,Yugoslavia,1978,exact,NA,NA,NA,NA,NA,NA
 Bjelašnica,New build,Alpine skiing,In use,1984,Sarajevo,Yugoslavia,1978,exact,NA,NA,NA,NA,NA,NA
 Jahorina,New build,Alpine skiing,In use,1984,Sarajevo,Yugoslavia,1978,exact,NA,NA,NA,NA,NA,NA
 Igman Olympic Jumps,New build,"Ski jumping, Nordic
-combined",Not in use,1984,Sarajevo,Yugoslavia,1978,exact,NA,NA,NA,NA,NA,NA
+combined",In use (repurposed),1984,Sarajevo,Yugoslavia,1978,exact,NA,NA,NA,NA,NA,NA
 "Skenderija Cultural and
 Sports Centre",Existing,"Figure skating, ice hockey",In use,1984,Sarajevo,Yugoslavia,1978,exact,NA,NA,NA,NA,NA,NA
 Koševo Stadium,Existing,Opening Ceremony,In use,1984,Sarajevo,Yugoslavia,1978,exact,NA,NA,NA,NA,NA,NA
@@ -1623,7 +1614,7 @@ Zetra Complex -Olympic Hall,New build,"Figure skating, ice hockey,
 Closing Ceremony",In use (rebuilt),1984,Sarajevo,Yugoslavia,1978,exact,NA,NA,NA,NA,NA,NA
 Mojmilo Olympic Village,New build,Athlete accommodation,In use,1984,Sarajevo,Yugoslavia,1978,exact,NA,NA,NA,NA,NA,NA
 "Trebevic Olympic
-Bobsleigh and Luge Track",New build,"Bobsleigh, luge",Not in use,1984,Sarajevo,Yugoslavia,1978,exact,NA,NA,NA,NA,NA,NA
+Bobsleigh and Luge Track",New build,"Bobsleigh, luge",In use (repurposed),1984,Sarajevo,Yugoslavia,1978,exact,NA,NA,NA,NA,NA,NA
 Whiteface Mountain,Existing,Alpine skiing,In use,1980,Lake Placid,United States,1974,exact,USA,7225.69135952566,NA,NA,NA,NA
 "Lake Placid
 Olympic Village",New build,Athlete accommodation,In use (repurposed),1980,Lake Placid,United States,1974,exact,USA,7225.69135952566,NA,NA,NA,NA
@@ -1672,8 +1663,8 @@ Sapporo Olympic Village,New build,Athlete accommodation,In use,1972,Sapporo,Japa
 Makomanai Cross-Country Events Site,Temporary,"Cross-country skiing,
 Nordic combined",Dismantled (temporary),1972,Sapporo,Japan,1966,exact,JPN,1167.69027982801,NA,1518.528,1975,9
 "Mt Teine Bobsleigh
-Course",New build,Bobsleigh,Not in use,1972,Sapporo,Japan,1966,exact,JPN,1167.69027982801,NA,1518.528,1975,9
-Mt Teine Luge Course,New build,Luge,Not in use,1972,Sapporo,Japan,1966,exact,JPN,1167.69027982801,NA,1518.528,1975,9
+Course",New build,Bobsleigh,Not in use (demolished),1972,Sapporo,Japan,1966,exact,JPN,1167.69027982801,NA,1518.528,1975,9
+Mt Teine Luge Course,New build,Luge,Not in use (demolished),1972,Sapporo,Japan,1966,exact,JPN,1167.69027982801,NA,1518.528,1975,9
 Okurayama Ski Jump,Existing,Ski jumping,In use,1972,Sapporo,Japan,1966,exact,JPN,1167.69027982801,NA,1518.528,1975,9
 "Makomanai Biathlon
 Course",New build,Biathlon,In use (repurposed),1972,Sapporo,Japan,1966,exact,JPN,1167.69027982801,NA,1518.528,1975,9
@@ -1691,7 +1682,7 @@ Chamrousse,New build,Alpine skiing,In use,1968,Grenoble,France,1964,exact,FRA,18
 Piste de Bobsled,New build,Bobsleigh,Not in use (demolished),1968,Grenoble,France,1964,exact,FRA,1891.12061521027,NA,280.727,1975,11
 "Tremplin de saut à ski de
 Saint Nizier/Tremplin du
-Dauphiné",New build,Ski jumping,Not In use,1968,Grenoble,France,1964,exact,FRA,1891.12061521027,NA,280.727,1975,11
+Dauphiné",New build,Ski jumping,In use (repurposed),1968,Grenoble,France,1964,exact,FRA,1891.12061521027,NA,280.727,1975,11
 Piste de Luge,New build,Luge,In use (limited),1968,Grenoble,France,1964,exact,FRA,1891.12061521027,NA,280.727,1975,11
 Patinoire Municipale,Existing,Ice hockey,In use,1968,Grenoble,France,1964,exact,FRA,1891.12061521027,NA,280.727,1975,11
 Autrans,New build,"Biathlon, cross-country
@@ -1742,9 +1733,9 @@ East Rink,Temporary,Ice hockey,Dismantled (temporary),1960,Squaw Valley,United S
 Oval",Temporary,Speed skating,Dismantled (temporary),1960,Squaw Valley,United States,1955,exact,USA,NA,NA,NA,NA,NA
 McKinney Creek Stadium,Temporary,"Cross-country skiing,
 Nordic combined",Dismantled (temporary),1960,Squaw Valley,United States,1955,exact,USA,NA,NA,NA,NA,NA
-Bobsleigh Run,Existing,Bobsleigh,Not in use,1956,Cortina d’Ampezzo,Italy,1949,exact,ITA,NA,NA,NA,NA,NA
+Bobsleigh Run,Existing,Bobsleigh,Dismantled (temporary),1956,Cortina d’Ampezzo,Italy,1949,exact,ITA,NA,NA,NA,NA,NA
 Ski Jump Italia,Existing,"Ski jumping, Nordic
-combined",Not in use,1956,Cortina d’Ampezzo,Italy,1949,exact,ITA,NA,NA,NA,NA,NA
+combined",In use (repurposed),1956,Cortina d’Ampezzo,Italy,1949,exact,ITA,NA,NA,NA,NA,NA
 Apollonio Stadium,Existing,Ice hockey,In use,1956,Cortina d’Ampezzo,Italy,1949,exact,ITA,NA,NA,NA,NA,NA
 "Tofana di Mezzo: the
 Olympia, Canalone and
@@ -1761,24 +1752,20 @@ Ullevål Olympic Village,New build,Athlete accommodation,In use,1952,Oslo,Norway
 Ila Olympic Village,New build,Athlete accommodation,In use,1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
 Korketrekken,Temporary (seasonal),Bobsleigh,Dismantled (seasonal),1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
 "Sandvika Kadettangen
-Stadium",Existing,Ice hockey,"In use
-(repurposed)",1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
+Stadium",Existing,Ice hockey,In use (repurposed),1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
 "Drammen Marienlyst
-Stadium",Existing,Ice hockey,"In use
-(repurposed)",1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
-Lillestrøm Stadium,Existing,Ice hockey,"In use
-(repurposed)",1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
+Stadium",Existing,Ice hockey,In use (repurposed),1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
+Lillestrøm Stadium,Existing,Ice hockey,In use (repurposed),1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
 Norefjell,Existing,Alpine skiing,In use,1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
 Dæhlenenga (Idrettspark),Existing,"Ice hockey, bandy
-(demonstration sport)","In use
-(repurposed)",1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
+(demonstration sport)",In use (repurposed),1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
 Bislett Stadium,Existing,"Figure skating, speed skating, Opening and Closing Ceremonies,
 bandy
-(demonstration sport)",In use (repurposed,1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
+(demonstration sport)",In use (repurposed),1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
 "Holmenkollen Ski
 Jumping Hill",Existing,"Ski jumping,
 Nordic combined",In use,1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
-Rødkleiva,Existing,Alpine skiing,Not in use,1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
+Rødkleiva,Existing,Alpine skiing,In use (limited),1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
 Holmenkollen Cross-Country,Existing,"Cross-country skiing,
 Nordic combined",In use (rebuilt),1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
 Jordal Amfi,New build,Ice hockey,In use (rebuilt),1952,Oslo,Norway,1947,exact,NOR,NA,NA,439.924,1975,28
