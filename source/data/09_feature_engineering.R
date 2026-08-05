@@ -4,20 +4,31 @@
 #            fall near 0; existing venues are higher.
 
 library(tidyverse)
+# Fixed reference year for time-since features per Katie's EDA feedback.
+# Kept as a constant, not Sys.Date(), so the feature value stays the same no
+# matter when the script is run.
+AS_OF_YEAR <- 2026
 
 # ---- World Cup: opened_year is already in the joined table ----
 wc <- read_csv("data/processed/worldcup_stadiums_joined.csv", show_col_types = FALSE) |>
   mutate(venue_age = tournament_year - opened_year,
-         venue_age = if_else(venue_age < 0, NA_real_, venue_age))
+         venue_age = if_else(venue_age < 0, NA_real_, venue_age),
+         years_since_event = AS_OF_YEAR - tournament_year,
+         years_since_construction = AS_OF_YEAR - opened_year)
 
 # ---- Olympic: opened_year comes from the Wikidata pull output ----
 ol <- read_csv("data/external/wikidata_olympic_venues.csv", show_col_types = FALSE) |>
   mutate(venue_age = games_year - opened_year,
-         venue_age = if_else(venue_age < 0, NA_real_, venue_age))
+         venue_age = if_else(venue_age < 0, NA_real_, venue_age),
+         years_since_event = AS_OF_YEAR - games_year,
+         years_since_construction = AS_OF_YEAR - opened_year)
 
 # ---- Coverage + sanity check ----
 cat("World Cup venue_age present:", sum(!is.na(wc$venue_age)), "of", nrow(wc), "\n")
 cat("Olympic venue_age present: ", sum(!is.na(ol$venue_age)), "of", nrow(ol), "\n\n")
+cat("World Cup years_since_event present:", sum(!is.na(wc$years_since_event)), "of", nrow(wc), "\n")
+cat("World Cup years_since_construction present:", sum(!is.na(wc$years_since_construction)), "of", nrow(wc), "\n")
+cat("Olympic years_since_event present:", sum(!is.na(ol$years_since_event)), "of", nrow(ol), "\n")
 cat("World Cup venue_age summary:\n"); print(summary(wc$venue_age))
 cat("\nOlympic venue_age summary:\n"); print(summary(ol$venue_age))
 

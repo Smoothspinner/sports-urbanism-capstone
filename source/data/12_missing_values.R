@@ -13,7 +13,10 @@ add_flags_impute <- function(df, vars) {
   df
 }
 
-num_vars <- c("log_capacity", "log_gdp", "log_city_pop", "log_distance", "venue_age")
+num_vars <- c("log_capacity", "log_gdp", "log_city_pop", "log_distance", "venue_age",
+              "years_since_event", "years_since_construction",
+              "gdp_pct_rank", "gdp_z", "city_pop_pct_rank", "city_pop_z",
+              "capacity_pct_rank", "capacity_z")
 
 wc <- read_csv("data/processed/worldcup_model_split.csv", show_col_types = FALSE) |>
   add_flags_impute(num_vars)

@@ -1,9 +1,20 @@
 # Cleaning and transforms -> model-ready tables.
-# Model with the log_ columns, not the raw ones (same info, avoids double-counting).
-# white_elephant is decided from status for now; Brian's reason coding will refine it later.
+# white_elephant from status for now, pending Brian's reason coding.
 
 library(tidyverse)
 library(countrycode)
+
+nan_to_na <- function(x) if_else(is.nan(x), NA_real_, x)
+
+# global GDP rank per year, real countries only
+gdp_global <- read_csv("data/processed/worldbank_gdp_per_capita_long.csv", show_col_types = FALSE) |>
+  mutate(year = as.integer(year)) |>
+  filter(!is.na(countrycode(iso3c, "iso3c", "country.name"))) |>
+  group_by(year) |>
+  mutate(gdp_pct_rank = nan_to_na(percent_rank(gdp_per_capita)),
+         gdp_z        = nan_to_na(as.numeric(scale(gdp_per_capita)))) |>
+  ungroup() |>
+  select(iso3c, year, gdp_pct_rank, gdp_z)
 
 # ---- World Cup ----
 wc <- read_csv("data/processed/worldcup_stadiums_features.csv",
@@ -22,7 +33,16 @@ wc <- read_csv("data/processed/worldcup_stadiums_features.csv",
                     TRUE                    ~ "recent"),
     region = countrycode(country_name, "country.name", "continent",
                          custom_match = c("England" = "Europe"))
-  )
+  ) |>
+  left_join(gdp_global, by = c("iso3c", "award_year" = "year")) |>
+  group_by(award_year) |>
+  mutate(
+    city_pop_pct_rank = nan_to_na(percent_rank(city_pop_thousands)),
+    city_pop_z        = nan_to_na(as.numeric(scale(city_pop_thousands))),
+    capacity_pct_rank = nan_to_na(percent_rank(stadium_capacity)),
+    capacity_z        = nan_to_na(as.numeric(scale(stadium_capacity)))
+  ) |>
+  ungroup()
 
 # ---- Olympic ----
 ol <- read_csv("data/processed/olympic_venues_features.csv",
@@ -32,7 +52,7 @@ ol <- read_csv("data/processed/olympic_venues_features.csv",
       str_squish() |> str_to_lower(),
     class_group = case_when(str_starts(class_clean, "existing")  ~ "Existing",
                             str_starts(class_clean, "temporary") ~ "Temporary",
-                            TRUE                                 ~ "New"),   # Mixed -> New
+                            TRUE                                 ~ "New"),
     new_build = case_when(class_group == "New"      ~ 1L,
                           class_group == "Existing" ~ 0L,
                           TRUE                      ~ NA_integer_),
@@ -54,7 +74,16 @@ ol <- read_csv("data/processed/olympic_venues_features.csv",
                          custom_match = c("West Germany" = "Europe",
                                           "Soviet Union" = "Europe",
                                           "Yugoslavia"   = "Europe"))
-  )
+  ) |>
+  left_join(gdp_global, by = c("iso3c", "award_year" = "year")) |>
+  group_by(award_year) |>
+  mutate(
+    city_pop_pct_rank = nan_to_na(percent_rank(city_pop_thousands)),
+    city_pop_z        = nan_to_na(as.numeric(scale(city_pop_thousands))),
+    capacity_pct_rank = nan_to_na(percent_rank(capacity_wd)),
+    capacity_z        = nan_to_na(as.numeric(scale(capacity_wd)))
+  ) |>
+  ungroup()
 
 # ---- Verification ----
 cat("== World Cup ==\n")
@@ -65,6 +94,8 @@ cat("era:\n");            print(count(wc, era))
 cat("region:\n");         print(count(wc, region))
 cat("log ranges:\n")
 print(summary(select(wc, log_capacity, log_gdp, log_city_pop, log_distance)))
+cat("rank/z-score ranges:\n")
+print(summary(select(wc, gdp_pct_rank, gdp_z, city_pop_pct_rank, city_pop_z, capacity_pct_rank, capacity_z)))
 
 cat("\n== Olympic ==\n")
 cat("class_group:\n");    print(count(ol, class_group))
@@ -72,6 +103,8 @@ cat("new_build:\n");      print(count(ol, new_build))
 cat("white_elephant:\n");print(count(ol, white_elephant))
 cat("era:\n");            print(count(ol, era))
 cat("region:\n");         print(count(ol, region))
+cat("rank/z-score ranges:\n")
+print(summary(select(ol, gdp_pct_rank, gdp_z, city_pop_pct_rank, city_pop_z, capacity_pct_rank, capacity_z)))
 
 # ---- Save ----
 write_csv(wc, "data/processed/worldcup_model.csv")
