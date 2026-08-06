@@ -9,6 +9,9 @@
 #      venues all grabbing Beijing National Stadium) -> untrustworthy, drop all.
 #   3. Reject a match if the venue opened AFTER the Games it hosted (impossible).
 #   4. Cache the Wikipedia search so re-runs do not re-query 900 pages.
+#
+# Opening year prefers P1619 (official opening); falls back to P571 (inception)
+# when P1619 is blank, since inception is filled far more often on Wikidata.
 
 # Output: data/external/wikidata_olympic_venues.csv
 
@@ -66,17 +69,18 @@ iri <- function(t) {
 venues <- venues |>
   mutate(article = map_chr(page_title, ~ if (is.na(.x)) NA_character_ else iri(.x)))
 
-# ---- 4. Pull coords, capacity, opening year, AND the item's type(s) ----
+# ---- 4. Pull coords, capacity, opening year, inception, AND the item's type(s) ----
 article_iris <- unique(na.omit(venues$article))
 values_block <- paste0("<", article_iris, ">", collapse = "\n    ")
 
 query <- paste0('
-SELECT ?article ?item ?itemLabel ?coords ?capacity ?opened ?typeLabel WHERE {
+SELECT ?article ?item ?itemLabel ?coords ?capacity ?opened ?inception ?typeLabel WHERE {
   VALUES ?article { ', values_block, ' }
   ?article schema:about ?item .
   OPTIONAL { ?item wdt:P625 ?coords . }
   OPTIONAL { ?item wdt:P1083 ?capacity . }
   OPTIONAL { ?item wdt:P1619 ?opened . }
+  OPTIONAL { ?item wdt:P571 ?inception . }
   OPTIONAL { ?item wdt:P31 ?type . }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }')
@@ -90,15 +94,20 @@ wd <- read_csv(rawToChar(res$content), show_col_types = FALSE)
 wd_clean <- wd |>
   group_by(article) |>
   summarise(
-    wikidata_id   = first(item),
-    wikidata_name = first(itemLabel),
-    types         = paste(unique(na.omit(typeLabel)), collapse = "; "),
-    coords        = first(na.omit(coords)),
-    capacity_wd   = suppressWarnings(max(capacity, na.rm = TRUE)),
-    opened_year   = suppressWarnings(min(as.integer(substr(opened, 1, 4)),
-                                         na.rm = TRUE)),
+    wikidata_id       = first(item),
+    wikidata_name     = first(itemLabel),
+    types             = paste(unique(na.omit(typeLabel)), collapse = "; "),
+    coords            = first(na.omit(coords)),
+    capacity_wd       = suppressWarnings(max(capacity, na.rm = TRUE)),
+    opened_year_p1619 = suppressWarnings(min(as.integer(substr(opened, 1, 4)), na.rm = TRUE)),
+    opened_year_p571  = suppressWarnings(min(as.integer(substr(inception, 1, 4)), na.rm = TRUE)),
     .groups = "drop") |>
-  mutate(across(where(is.numeric), ~ ifelse(is.infinite(.x), NA, .x)))
+  mutate(across(c(opened_year_p1619, opened_year_p571, capacity_wd),
+                ~ ifelse(is.infinite(.x), NA, .x)),
+         opened_year = coalesce(opened_year_p1619, opened_year_p571),
+         opened_year_source = case_when(!is.na(opened_year_p1619) ~ "P1619",
+                                        !is.na(opened_year_p571)  ~ "P571",
+                                        TRUE                      ~ NA_character_))
 
 venues <- venues |> left_join(wd_clean, by = "article")
 
@@ -121,21 +130,23 @@ venues <- venues |>
 
 # Blank facts from anything we are not keeping
 venues <- venues |>
-  mutate(coords      = if_else(is_venue, coords, NA_character_),
-         capacity_wd = if_else(is_venue, as.numeric(capacity_wd), NA_real_),
-         opened_year = if_else(is_venue, as.numeric(opened_year), NA_real_))
+  mutate(coords              = if_else(is_venue, coords, NA_character_),
+         capacity_wd         = if_else(is_venue, as.numeric(capacity_wd), NA_real_),
+         opened_year         = if_else(is_venue, as.numeric(opened_year), NA_real_),
+         opened_year_source  = if_else(is_venue, opened_year_source, NA_character_))
 
 # ---- 7. Attach to every row; FILTER 3: reject if it opened after its Games ----
 out <- ol |>
   mutate(venue_name = str_squish(venue_name), host_city = str_squish(host_city)) |>
   left_join(venues |> select(venue_name, host_city, page_title, types,
                              wikidata_id, wikidata_name, coords,
-                             capacity_wd, opened_year),
+                             capacity_wd, opened_year, opened_year_source),
             by = c("venue_name", "host_city")) |>
-  mutate(too_new     = !is.na(opened_year) & opened_year > games_year,
-         coords      = if_else(too_new, NA_character_, coords),
-         capacity_wd = if_else(too_new, NA_real_, capacity_wd),
-         opened_year = if_else(too_new, NA_real_, opened_year)) |>
+  mutate(too_new             = !is.na(opened_year) & opened_year > games_year,
+         coords              = if_else(too_new, NA_character_, coords),
+         capacity_wd         = if_else(too_new, NA_real_, capacity_wd),
+         opened_year         = if_else(too_new, NA_real_, opened_year),
+         opened_year_source  = if_else(too_new, NA_character_, opened_year_source)) |>
   select(-too_new)
 
 write_csv(out, "data/external/wikidata_olympic_venues.csv")
@@ -148,8 +159,10 @@ cat("\nUnique venues:            ", n_distinct(paste(out$venue_name, out$host_ci
 cat("Venues with a usable fact:", nrow(usable), "\n")
 cat("  with coordinates:       ", sum(!is.na(usable$coords)), "\n")
 cat("  with capacity:          ", sum(!is.na(usable$capacity_wd)), "\n")
-cat("  with opening year:      ", sum(!is.na(usable$opened_year)), "\n\n")
+cat("  with opening year:      ", sum(!is.na(usable$opened_year)), "\n")
+cat("    from P1619:           ", sum(usable$opened_year_source == "P1619", na.rm = TRUE), "\n")
+cat("    from P571 fallback:   ", sum(usable$opened_year_source == "P571", na.rm = TRUE), "\n\n")
 cat("Spot-check, sorted by capacity:\n")
 usable |> arrange(desc(capacity_wd)) |>
-  select(venue_name, host_city, games_year, page_title, capacity_wd, opened_year) |>
+  select(venue_name, host_city, games_year, page_title, capacity_wd, opened_year, opened_year_source) |>
   print(n = 30)

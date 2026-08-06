@@ -27,6 +27,7 @@ unmatched_games <- venues |> filter(is.na(award_year)) |> distinct(games_year, h
 if (nrow(unmatched_games) > 0) { cat("WARNING - venues with no lookup match:\n"); print(unmatched_games) }
 
 # ---- Country code; West Germany -> Germany, USSR/Yugoslavia -> NA ----
+# USSR/Yugoslavia no longer exist, no modern country to match GDP/CPI/pop to
 venues <- venues |>
   mutate(iso3c = countrycode(host_country, "country.name", "iso3c",
                              custom_match = c("West Germany" = "DEU",
@@ -40,6 +41,7 @@ venues <- venues |>
             by = c("iso3c", "award_year" = "year"))
 
 # ---- CPI at award year (2012+ only) ----
+# TI rescaled the CPI in 2012; scores before that year are not comparable
 cpi <- read_csv("data/processed/cpi_2012_2025_long.csv", show_col_types = FALSE)
 venues <- venues |>
   left_join(cpi |> filter(!is.na(iso3c)) |> select(iso3c, year, cpi_score),
@@ -71,6 +73,8 @@ un_keys <- un |>
   summarise(city_pop_thousands = max(pop_thousands), .groups = "drop")
 
 # Nearest UN year to each venue's award year.
+# UN population isn't published for every award year, so we take the closest
+# year available and record the gap in city_pop_year_gap.
 nearest <- venues |>
   mutate(join_city = clean_key(host_city)) |>
   left_join(alias, by = c("join_city" = "from")) |>
