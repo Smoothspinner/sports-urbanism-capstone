@@ -7,14 +7,16 @@ library(readxl)
 library(countrycode)
 library(stringi)
 
-# ---- Read the Olympic venue table (first six columns of "At A Glance") ----
-venues_raw <- read_excel("data/raw/VenueReportsV3.xlsx", sheet = "At A Glance")
-venues <- venues_raw[, 1:6]
+# ---- Read the Olympic venue table (first seven columns of "At A Glance") ----
+# Column 7, "Reasoning", is Brian's closure-reason coding added in V4.
+venues_raw <- read_excel("data/raw/VenueReportsV4.xlsx", sheet = "At A Glance")
+venues <- venues_raw[, 1:7]
 names(venues) <- c("venue_name", "venue_classification", "use_at_games",
-                   "current_status", "games_year", "host_city")
+                   "current_status", "games_year", "host_city", "reasoning")
 venues <- venues |>
   mutate(games_year = as.integer(as.character(games_year)),
          host_city  = str_squish(host_city),
+         reasoning  = na_if(str_squish(reasoning), "*"),
          row_id     = row_number()) |>
   filter(!is.na(venue_name))
 
@@ -96,6 +98,7 @@ cat("Venues:", nrow(venues), "\n")
 cat("GDP matched:", sum(!is.na(venues$gdp_per_capita)), "of", nrow(venues), "\n")
 cat("CPI matched:", sum(!is.na(venues$cpi_score)), "of", nrow(venues), "\n")
 cat("City pop matched:", sum(!is.na(venues$city_pop_thousands)), "of", nrow(venues), "\n")
+cat("Reasoning coded:", sum(!is.na(venues$reasoning)), "of", nrow(venues), "\n")
 cat("Year gaps - median:", median(venues$city_pop_year_gap, na.rm = TRUE),
     "| max:", max(venues$city_pop_year_gap, na.rm = TRUE), "\n\n")
 cat("Host cities with no UN population entry:\n")
