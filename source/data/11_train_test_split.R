@@ -9,11 +9,11 @@ set.seed(123)
 
 nan_to_na <- function(x) if_else(is.nan(x), NA_real_, x)
 
-# Population and capacity rank/z-score, scored against the TRAINING rows'
-# distribution for that award year only, then applied to every row in the
-# group. Computed here rather than in script 10, since doing it before the
-# split let test rows influence the reference distribution training scores
-# are compared against.
+# Capacity rank/z-score, scored against the TRAINING rows' distribution for
+# that award year only, then applied to every row in the group. Stays here
+# rather than moving to the join step like city population and GDP did,
+# since there's no external "every stadium in the world" panel to rank
+# against, only our own project's venues.
 rank_within_train <- function(x, award_year, set) {
   d <- tibble(x = x, award_year = award_year, set = set, row = seq_along(x))
   train_ref <- d |> filter(set == "train") |>
@@ -40,9 +40,7 @@ wc_test_ids <- wc |> distinct(stadium_id, white_elephant) |>
   group_by(white_elephant) |> slice_sample(prop = test_prop_wc) |> pull(stadium_id)
 wc <- wc |> mutate(set = if_else(stadium_id %in% wc_test_ids, "test", "train"))
 
-wc_pop <- rank_within_train(wc$city_pop_thousands, wc$award_year, wc$set)
 wc_cap <- rank_within_train(wc$stadium_capacity, wc$award_year, wc$set)
-wc$city_pop_z <- wc_pop$z; wc$city_pop_pct_rank <- wc_pop$pct
 wc$capacity_z <- wc_cap$z; wc$capacity_pct_rank <- wc_cap$pct
 
 # ---- Olympic ----
@@ -53,9 +51,7 @@ ol_test_ids <- ol |> distinct(vid, white_elephant) |>
   group_by(white_elephant) |> slice_sample(prop = test_prop_ol) |> pull(vid)
 ol <- ol |> mutate(set = if_else(vid %in% ol_test_ids, "test", "train"))
 
-ol_pop <- rank_within_train(ol$city_pop_thousands, ol$award_year, ol$set)
 ol_cap <- rank_within_train(ol$capacity_wd, ol$award_year, ol$set)
-ol$city_pop_z <- ol_pop$z; ol$city_pop_pct_rank <- ol_pop$pct
 ol$capacity_z <- ol_cap$z; ol$capacity_pct_rank <- ol_cap$pct
 
 # ---- Check sizes and outcome balance ----

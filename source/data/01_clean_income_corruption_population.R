@@ -1,4 +1,4 @@
-# This script turns 3 raw data sources (World Bank income, corruption scores
+# This script turns 3 raw data sources (World Bank income, corruption scores,
 # UN city populations) into clean tables ready to join to the venue list.
 # Outputs saved in data/processed
 
@@ -9,6 +9,8 @@ library(countrycode)
 
 # ---- 1. Country income ----
 # Downloads GDP per person by country and year from the World Bank.
+# 1960 is the earliest year WDI has; 2026 matches AS_OF_YEAR elsewhere in the
+# pipeline so this file covers every year we could ever need to join against.
 gdp <- WDI(indicator = "NY.GDP.PCAP.CD", start = 1960, end = 2026) |>
   rename(gdp_per_capita = NY.GDP.PCAP.CD) |>
   select(iso3c, country, year, gdp_per_capita) |>
@@ -30,6 +32,8 @@ write_csv(cpi, "data/processed/cpi_2012_2025_long.csv")
 # ---- 3. City populations ----
 # Reads the UN city population spreadsheet (1975-2050) and reshapes it
 # to one row per city per year, keeping coordinates for the distance predictor.
+# Capped at 2026 (AS_OF_YEAR) so the file doesn't carry UN population
+# projections past the point our features are allowed to look.
 un <- read_excel("data/raw/WUP2025-F21-DEGURBA-Cities_Pop.xlsx",
                  sheet = "Data") |>
   select(country = Location, iso3c = ISO3_Code, city_code = City_Code,

@@ -1,11 +1,13 @@
 # Attaches country income (GDP), corruption (CPI), and host-city population
 # to Jay's stadium table at the award year. City population uses the closest
 # available UN year (recorded in city_pop_year_gap) because UN coverage for
-# many cities only starts in 2000. 
+# many cities only starts in 2000.
 
 library(tidyverse)
 library(countrycode)
 library(stringi)
+
+nan_to_na <- function(x) if_else(is.nan(x), NA_real_, x)
 
 venues <- read_csv("data/processed/worldcup_stadiums_by_tournament.csv",
                    show_col_types = FALSE)
@@ -82,6 +84,10 @@ alias <- tribble(
   "stanford",        "san francisco"
 )
 
+# City population rank/z-score against every city in the UN file that year,
+# not just our host cities. Most award years have only one host city, so
+# ranking within our own data collapses to the same value every time; this
+# ranks against the full world instead, same fix as the GDP percentile.
 un_keys <- un |>
   mutate(primary = clean_key(str_remove(city, "\\s*\\(.*\\)$")),
          alt     = if_else(str_detect(city, "\\("),
@@ -90,7 +96,11 @@ un_keys <- un |>
   pivot_longer(c(primary, alt), values_to = "join_city") |>
   filter(!is.na(join_city)) |>
   group_by(iso3c, join_city, year) |>
-  summarise(city_pop_thousands = max(pop_thousands), .groups = "drop")
+  summarise(city_pop_thousands = max(pop_thousands), .groups = "drop") |>
+  group_by(year) |>
+  mutate(city_pop_pct_rank = nan_to_na(percent_rank(city_pop_thousands)),
+         city_pop_z        = nan_to_na(as.numeric(scale(city_pop_thousands)))) |>
+  ungroup()
 
 # For each venue, find the UN row for its city closest to the award year.
 nearest <- venues |>
@@ -104,8 +114,8 @@ nearest <- venues |>
   group_by(row_id) |>
   slice_min(city_pop_year_gap, n = 1, with_ties = FALSE) |>
   ungroup() |>
-  select(row_id, city_pop_thousands, city_pop_year_used = year,
-         city_pop_year_gap)
+  select(row_id, city_pop_thousands, city_pop_pct_rank, city_pop_z,
+         city_pop_year_used = year, city_pop_year_gap)
 
 venues <- venues |> left_join(nearest, by = "row_id") |> select(-row_id)
 
