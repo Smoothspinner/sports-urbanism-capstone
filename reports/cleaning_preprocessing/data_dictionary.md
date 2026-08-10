@@ -1,6 +1,7 @@
-# Data Dictionary: Sprint 4 (Preprocessing & Feature Engineering)
+# Data Dictionary: Modeling Tables
 
-Current as of the Sprint 4 modelling tables. This supersedes the EDA-stage
+Current as of the Sprint 5 target freeze, covering the same preprocessing and
+feature engineering as the Sprint 4 report. This supersedes the EDA-stage
 dictionary at `reports/EDA/data_dictionary.md`, which describes the earlier
 joined tables before feature engineering, splitting and imputation.
 
@@ -26,6 +27,7 @@ tournament, so a stadium used at two tournaments appears twice.
 | `venue_classification` | text | Raw IOC classification: New, Existing, Temporary, Mixed |
 | `use_at_games` | text | Sport or sports the venue hosted |
 | `current_status` | text | Raw status from the IOC report; the source of the target |
+| `reasoning` | text | Why a closed venue closed, coded from the V4 venue reports: abandoned before demolition, urban redevelopment, replaced by successor stadium, or war. Blank for venues still in use. Read together with `current_status` to set the target. The World Cup equivalent is `not_in_use_reason` |
 | `games_year` | number | Year the Games were held |
 | `host_city`, `host_country` | text | Host of those Games |
 | `award_year` | number | Year the Games were awarded; the join key for country data |
@@ -79,15 +81,15 @@ the year it was held, because award year is when the building decision was made.
 | `years_since_event` | number | 2026 minus event year | How long the venue has had to fail since its event |
 | `years_since_construction` | number | 2026 minus `opened_year` | Total age today |
 | `venue_lon`, `venue_lat` | number | parsed from `coords` | Venue coordinate |
-| `city_lon`, `city_lat` | number | UN city file | Host city centre coordinate |
-| `distance_mi` | number | Haversine distance | Miles from the venue to the host city centre |
+| `city_lon`, `city_lat` | number | UN city file | Host city center coordinate |
+| `distance_mi` | number | Haversine distance | Miles from the venue to the host city center |
 | `log_capacity`, `log_gdp`, `log_city_pop`, `log_distance` | number | `log1p()` of the source column | All four are right-skewed in raw form |
 | `class_group` (Olympic) | category | `venue_classification` | Cleaned to Existing / New / Temporary |
 | `new_build` | 0/1 | `class_group` or `newly_built` | 1 = built for the event, 0 = already existed. Missing for the 11 Olympic rows classified Temporary |
 | `single_purpose` (World Cup) | 0/1 | `design_purpose` | 1 = single-purpose |
 | `era` | category | event year | pre-WWII (to 1945), postwar (1946 to 2000), recent (2001 on) |
 | `region` | category | host country | Continental group |
-| `status_clean`, `status_group` (Olympic) | text | `current_status` | Whitespace and case normalised, then bucketed to in use / not in use / temporary |
+| `status_clean`, `status_group` (Olympic) | text | `current_status` | Whitespace and case normalized, then bucketed to in use / not in use / temporary |
 | `vid` (Olympic) | text | venue name plus host city | The unit the split is grouped on |
 
 `AS_OF_YEAR` is fixed at 2026 rather than read from the system clock, so the
@@ -95,21 +97,32 @@ time-since features do not change value depending on when the script is run.
 
 ---
 
-## 4. Rank and standardised versions
+## 4. Rank and standardized versions
 
 For three variables the table also carries a within-group rank and a
-standardised score. Both are computed per `award_year`, except the GDP pair,
+standardized score. Both are computed per `award_year`, except the GDP pair,
 which is ranked against every World Bank country in that year rather than only
 against host countries.
 
 | Column | Type | Notes |
 |----|----|----|
 | `gdp_pct_rank`, `gdp_z` | number | Ranked against all World Bank countries that year |
-| `city_pop_pct_rank`, `city_pop_z` | number | Ranked among host venues in the same award year |
-| `capacity_pct_rank`, `capacity_z` | number | Ranked among host venues in the same award year. Thin on the Olympic side, see the missingness note in the report |
+| `city_pop_pct_rank`, `city_pop_z` | number | Ranked against training rows in the same award year |
+| `capacity_pct_rank`, `capacity_z` | number | Ranked against training rows in the same award year. Missing for the same 739 Olympic rows that carry no capacity value, so the gap is inherited from the source column rather than created here. See the missingness note in the report |
 
-A percentile rank over a group of one returns no value, so these columns are
-missing for any award year with a single usable venue.
+The population and capacity pairs are built in `11_train_test_split.R` rather
+than in script 10, scored against the training rows for that award year only.
+Computing them before the split let test rows influence the distribution the
+training scores were compared against. The rank is now the share of training
+values at or below the row's own value. The `percent_rank()` behind the ranks
+quoted in the Sprint 4 EDA report is a different statistic.
+
+A percentile over a group of one returns 1, and a group with no spread has a
+standard deviation of zero, so the z-score is undefined. On the Olympic side
+both are common, since each Games has one host city: of 875 rows,
+`city_pop_pct_rank` is 1 for 674 and `city_pop_z` missing for 683.
+`log_city_pop` carries the population signal there instead. A value is also
+missing where the award year has no usable training rows.
 
 ---
 
@@ -117,8 +130,20 @@ missing for any award year with a single usable venue.
 
 | Column | Type | Notes |
 |----|----|----|
-| `white_elephant` | TRUE / FALSE | The target. TRUE where the cleaned status is "not in use". Missing, and therefore dropped, for temporary and dismantled venues |
+| `white_elephant` | TRUE / FALSE | The target. TRUE only where the status is "not in use" and the closure reason is "abandoned before demolition". Every other closed venue is FALSE. Missing, and therefore dropped, for temporary and dismantled venues |
 | `set` | text | `train` or `test` |
+
+The target was narrowed at the start of Sprint 5. Every "not in use" venue
+previously counted as a failure, so a stadium replaced by a successor scored
+the same as one left standing empty. The definition now reads the closure
+reason as well, taken from the coding in the V4 venue reports. Replaced by
+successor and war are never failures. Urban redevelopment is held behind a
+switch at the top of `10_cleaning_transforms.R`,
+`REDEVELOPMENT_COUNTS_AS_FAILURE`, currently FALSE. Setting it to TRUE moves 69
+Olympic and 5 World Cup venues into the positive class.
+
+The positive class holds 26 of 875 Olympic rows and 4 of 265 World Cup rows, so
+accuracy is not a usable score on either table.
 
 For each of the 13 numeric predictors below, the table carries two extra
 columns, giving 26 columns per table:
@@ -140,6 +165,6 @@ model during fitting.
 ## 6. Columns added by the unsupervised step
 
 `source/features/13_unsupervised_pca_kmeans.R` fits on the training rows and
-writes its output to figures rather than back into the modelling tables. No
+writes its output to figures rather than back into the modeling tables. No
 principal component or cluster label is carried forward as a predictor. See the
 Results section of the Sprint 4 report for why.
