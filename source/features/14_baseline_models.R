@@ -15,7 +15,7 @@ library(pROC)
 
 set.seed(123)
 
-predictors <- c("log_capacity_imp", "gdp_pct_rank_imp", "venue_age_imp", "new_build")
+predictors <- c("log_capacity_imp", "gdp_pct_rank_imp", "city_pop_pct_rank_imp", "new_build")
 
 # ---- Olympic: CV-scored ----
 ol <- read_csv("data/processed/olympic_model_split.csv", show_col_types = FALSE) |>
