@@ -32,12 +32,13 @@ Bid-tied status and design purpose will emerge as the strongest predictors,
 and the model will outperform a naive baseline that always predicts "stays active."
 
 ## Where files go
-- data/raw — original downloads, untouched, keep original filenames
-- data/processed — cleaned tables our scripts produce
-- data/external — reference pulls (e.g., Wikidata)
-- source/data — cleaning and join scripts (numbered in run order: 01_, 02_...)
-- source/features - modeling code
-- reports — weekly deliverables (proposal, EDA, etc.)
+- `data/raw`: original downloads, untouched, keep original filenames
+- `data/processed`: cleaned tables our scripts produce
+- `data/external`: reference pulls (e.g., Wikidata)
+- `source/features`: feature engineering and modeling scripts currently in use (13, 14)
+- `source/models`: model scripts, subfolders `baseline`, `GBM`, `RF`
+- `source/visualization`: plotting scripts
+- `reports`: weekly deliverables (proposal, EDA, etc.)
   
 ## How to Run
 1. Open the project in RStudio.
