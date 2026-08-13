@@ -35,6 +35,7 @@ and the model will outperform a naive baseline that always predicts "stays activ
 - `data/raw`: original downloads, untouched, keep original filenames
 - `data/processed`: cleaned tables our scripts produce
 - `data/external`: reference pulls (e.g., Wikidata)
+- `source/data`: cleaning and join scripts (numbered in run order: 01_, 02_...)
 - `source/features`: feature engineering and modeling scripts currently in use (13, 14)
 - `source/models`: model scripts, subfolders `baseline`, `GBM`, `RF`
 - `source/visualization`: plotting scripts
@@ -46,10 +47,10 @@ and the model will outperform a naive baseline that always predicts "stays activ
    Directory > Choose Directory**, then select the top-level project folder,
    the one that contains this README file and the `source` and `data` folders.
    Scripts use paths relative to the repo root, so this step is required every session.
-4. Install any missing packages: `tidyverse, countrycode, geosphere,
+3. Install any missing packages: `tidyverse, countrycode, geosphere,
    stringi, httr, jsonlite, readxl, WDI, caret, pROC` (MASS installs
    automatically with caret).
-5. Run the scripts in `source/data` in order (01 through 12), then the
+4. Run the scripts in `source/data` in order (01 through 12), then the
    scripts in `source/features` (13, 14).
 
 | # | Script | What it does |
