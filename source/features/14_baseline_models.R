@@ -54,7 +54,8 @@ cat("LDA ROC across the 50 folds: min", round(min(fit_lda$resample$ROC), 3),
 # sensitivity and specificity (Youden's J), instead of the default .5, since
 # .5 calls almost everything "no" at a 3% failure rate.
 best_cut <- function(pred_df) {
-  roc_obj <- roc(pred_df$obs, pred_df$yes, levels = c("no", "yes"), quiet = TRUE)
+  roc_obj <- roc(pred_df$obs, pred_df$yes, levels = c("no", "yes"),
+                 direction = "<", quiet = TRUE)
   coords(roc_obj, "best", best.method = "youden",
          ret = c("threshold", "sensitivity", "specificity"))
 }
