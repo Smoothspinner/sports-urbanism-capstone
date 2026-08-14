@@ -1,3 +1,4 @@
+# Author: MG
 # Pulls Wikidata facts (coordinates, seating capacity, opening year) for the
 # Olympic venues. Brian's IOC table has NO Wikipedia links, so we find each
 # venue's page by NAME + HOST CITY via the Wikipedia search API, then query

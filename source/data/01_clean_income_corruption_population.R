@@ -1,3 +1,4 @@
+#Author: MG
 # This script turns 3 raw data sources (World Bank income, corruption scores,
 # UN city populations) into clean tables ready to join to the venue list.
 # Outputs saved in data/processed

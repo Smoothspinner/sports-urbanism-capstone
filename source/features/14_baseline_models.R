@@ -1,3 +1,4 @@
+# Author: MG
 # Baseline classifiers: logistic regression and LDA, Olympic only.
 # Scored with repeated stratified k-fold CV (a range, not one train/test
 # number) per Katie's feedback on the last report.

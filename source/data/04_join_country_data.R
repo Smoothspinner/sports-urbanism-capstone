@@ -1,3 +1,4 @@
+# Author: MG
 # Attaches country income (GDP), corruption (CPI), and host-city population
 # to Jay's stadium table at the award year. City population uses the closest
 # available UN year (recorded in city_pop_year_gap) because UN coverage for

@@ -1,3 +1,4 @@
+# Author: JL
 # PCA and k-means on the Olympic venues, fitted on the training rows only.
 # The outcome was kept out of both and only used afterwards, to check whether the groups they found had anything to do with what we are trying to predict.
 

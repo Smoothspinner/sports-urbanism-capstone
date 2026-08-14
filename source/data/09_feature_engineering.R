@@ -1,7 +1,8 @@
+# Author: MG
 # Feature engineering for the venue tables.
 # Feature 1: venue_age = how old the venue was at the time of its event,
-#            i.e. the event year minus the year the venue opened. New builds
-#            fall near 0; existing venues are higher.
+# i.e. the event year minus the year the venue opened. New builds
+# fall near 0; existing venues are higher.
 
 library(tidyverse)
 # Fixed reference year for time-since features per Katie's EDA feedback.

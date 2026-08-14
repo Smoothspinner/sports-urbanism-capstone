@@ -1,3 +1,4 @@
+# Author: MG
 # Train/test split: grouped by venue (no venue in both sets) and stratified by
 # outcome so both sets keep white elephants. A pure time-aware split left the
 # World Cup test set with zero failures, so we split for evaluability instead.

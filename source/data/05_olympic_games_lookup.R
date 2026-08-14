@@ -4,6 +4,7 @@
 # "Games Year" + "Host City" strings in Brian's VenueReportsV3.xlsx ("At A
 # Glance" sheet) so 06_join_olympic_data.R can join on those two columns.
 #
+#Author: MG
 # Award year = the year the IOC session elected the host (the Olympic analogue
 # of the bid/award year we used on the World Cup side). Where a Games was moved
 # from its original host, we use the year the ACTUAL host was confirmed, same

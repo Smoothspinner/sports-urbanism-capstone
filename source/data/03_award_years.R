@@ -1,3 +1,4 @@
+# Author: MG 
 # Hand-built lookup: the year each World Cup was awarded to its host.
 # Needed for the newly_built definition (venue existed before award = existing).
 # Keyed to tournament_id from Fjelstul's tournaments.csv.

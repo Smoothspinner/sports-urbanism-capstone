@@ -1,3 +1,4 @@
+# Author: MG
 # Cleaning and transforms -> model-ready tables.
 # white_elephant frozen (Aug 2026): only "abandoned before demolition" counts
 # as a failure. Replaced-by-successor and war are never failures.

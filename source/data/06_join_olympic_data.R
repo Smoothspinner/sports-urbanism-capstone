@@ -1,3 +1,4 @@
+# Author: MG
 # Olympic twin of 04_join_country_data.R: attaches GDP, corruption (CPI), and
 # host-city population to the Olympic venue table at each Games' award year.
 # Dead countries (USSR, Yugoslavia) carry no country data by design.

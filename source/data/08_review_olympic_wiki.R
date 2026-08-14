@@ -1,3 +1,4 @@
+# Author: MG
 # Manual review of the Wikidata matches from 07_wikidata_olympic_pull.R.
 # Doing it in R so there is no need to open the CSV in Excel
 

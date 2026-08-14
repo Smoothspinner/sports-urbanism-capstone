@@ -1,3 +1,4 @@
+# Author: MG
 # Pulls Wikidata facts (coordinates, capacity, opening/demolition dates,
 # tenants) for all 240 World Cup stadiums. Matches by Wikipedia link,
 # first asking Wikipedia for each page's current title so renamed
