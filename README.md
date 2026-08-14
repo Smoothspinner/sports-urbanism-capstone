@@ -51,7 +51,7 @@ and the model will outperform a naive baseline that always predicts "stays activ
    stringi, httr, jsonlite, readxl, WDI, caret, pROC` (MASS installs
    automatically with caret).
 4. Run the scripts in `source/data` in order (01 through 12), then the
-   scripts in `source/features` (13, 14).
+   scripts in `source/features` (13, 14, 15).
 
 | # | Script | What it does |
 |---|--------|---------------|
@@ -69,6 +69,7 @@ and the model will outperform a naive baseline that always predicts "stays activ
 | 12 | `12_missing_values.R` | Adds missing-value flags and train-only median imputation for each numeric predictor |
 | 13 | `13_unsupervised_pca_kmeans.R` | PCA and k-means exploration of the feature space |
 | 14 | `14_baseline_models.R` | Logistic regression and LDA baseline classifiers, cross-validated |
+| 15 | `15_missingness_diagnostic.R` | Reproduces Table 1: tests each imputed predictor's missing-flag against the outcome (Fisher's exact test) |
 
 ## Data Sources
 - **World Bank** (via the `WDI` package): GDP per capita, 1960-2026
