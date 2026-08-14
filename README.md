@@ -89,9 +89,7 @@ and the model will outperform a naive baseline that always predicts "stays activ
 | `best_cut()` | 14 | Picks the classification threshold that balances sensitivity and specificity (Youden's J) from pooled cross-validation predictions |
 
 ## Contributors
-- Jonathan Layne: unsupervised analysis (13), report assembly
-- Brian Wrenn: venue status/closure-reason coding (source data for the target)
-- Martin Gotora: feature engineering (09), cleaning/target definition (10),
-  train/test split (11), missing values (12), baseline models (14)
+- Jonathan Layne: unsupervised analysis (13), report assembly, reviewed the code directly and caught errors before the report went out
+- Brian Wrenn: sourced and coded the venue status/closure-reason raw data, the basis for our target variable
+- Martin Gotora: full data pipeline (01-12), baseline models (14)
 
-Martin ran the full pipeline end to end for each submission. Jay reviewed the code directly and caught errors before the report went out.
