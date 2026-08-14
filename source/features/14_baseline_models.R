@@ -91,3 +91,28 @@ print(summary(wc_logit))
 
 cat("\nWorld Cup new_build vs failure crosstab (explains the huge new_build1 SE above):\n")
 print(table(wc_all$new_build, wc_all$white_elephant))
+
+# ROC curves for both baseline models, from the pooled out-of-fold CV
+# predictions already computed above.
+
+library(pROC)
+
+roc_logit <- roc(fit_logit$pred$obs, fit_logit$pred$yes,
+                 levels = c("no", "yes"), direction = "<", quiet = TRUE)
+roc_lda   <- roc(fit_lda$pred$obs, fit_lda$pred$yes,
+                 levels = c("no", "yes"), direction = "<", quiet = TRUE)
+
+png("baseline_roc_curves.png", width = 1600, height = 1400, res = 200)
+plot(roc_logit, col = "#2b6cb0", lwd = 2,
+     main = "Baseline ROC Curves, Olympic Data (Pooled Out-of-Fold CV Predictions)")
+plot(roc_lda, col = "#c05621", lwd = 2, add = TRUE)
+abline(a = 1, b = -1, lty = 2, col = "gray60")
+legend("bottomright",
+       legend = c(sprintf("Logistic (mean CV AUC = %.3f)", mean(fit_logit$resample$ROC)),
+                  sprintf("LDA (mean CV AUC = %.3f)", mean(fit_lda$resample$ROC)),
+                  "Chance"),
+       col = c("#2b6cb0", "#c05621", "gray60"),
+       lwd = c(2, 2, 1), lty = c(1, 1, 2))
+dev.off()
+
+cat("Saved baseline_roc_curves.png to the repo root.\n")
