@@ -52,6 +52,16 @@ tournament, so a stadium used at two tournaments appears twice.
 | `iso3c` | text | Country code |
 | `coords` | text | Stadium coordinate from the Wikidata pull |
 
+Design purpose comes from the stadium's Wikipedia article, based on how the
+opening description characterizes the venue. A stadium described there as a
+football ground is recorded as Single-purpose, and one described as a multi-use
+or multi-purpose venue is recorded as Multi-purpose. On stadiums rebuilt
+between tournaments the label is judged per appearance, so the same venue can
+be Multi-purpose in one row and Single-purpose in another.
+
+The Olympic table carries no design purpose column. The IOC report does not
+record one, and the criterion above has not been applied to Olympic venues.
+
 ---
 
 ## 2. Country and city context, measured at the award year
@@ -99,30 +109,35 @@ time-since features do not change value depending on when the script is run.
 
 ## 4. Rank and standardized versions
 
-For three variables the table also carries a within-group rank and a
-standardized score. Both are computed per `award_year`, except the GDP pair,
-which is ranked against every World Bank country in that year rather than only
-against host countries.
+For three variables the table also carries a rank and a standardized score.
+The GDP and city population pairs are scored against outside reference data for
+that year rather than against the rows in this project. Capacity is scored per
+`award_year` against training rows only, since there is no outside panel of
+stadium sizes to rank against.
 
 | Column | Type | Notes |
 |----|----|----|
 | `gdp_pct_rank`, `gdp_z` | number | Ranked against all World Bank countries that year |
-| `city_pop_pct_rank`, `city_pop_z` | number | Ranked against training rows in the same award year |
+| `city_pop_pct_rank`, `city_pop_z` | number | Ranked against every city in the UN population file for that year |
 | `capacity_pct_rank`, `capacity_z` | number | Ranked against training rows in the same award year. Missing for the same 739 Olympic rows that carry no capacity value, so the gap is inherited from the source column rather than created here. See the missingness note in the report |
 
-The population and capacity pairs are built in `11_train_test_split.R` rather
-than in script 10, scored against the training rows for that award year only.
-Computing them before the split let test rows influence the distribution the
-training scores were compared against. The rank is now the share of training
-values at or below the row's own value. The `percent_rank()` behind the ranks
-quoted in the Sprint 4 EDA report is a different statistic.
+The capacity pair is built in `11_train_test_split.R` rather than in script 10,
+scored against the training rows for that award year only. Computing it before
+the split let test rows influence the distribution the training scores were
+compared against. Each rank is the share of training values at or below the
+row's own value. GDP is built in script 10 and city population in scripts 04
+and 06, both scored against outside data, so the split does not reach them.
+The `percent_rank()` behind the ranks quoted in the Sprint 4 EDA report is a
+different statistic.
 
 A percentile over a group of one returns 1, and a group with no spread has a
-standard deviation of zero, so the z-score is undefined. On the Olympic side
-both are common, since each Games has one host city: of 875 rows,
-`city_pop_pct_rank` is 1 for 674 and `city_pop_z` missing for 683.
-`log_city_pop` carries the population signal there instead. A value is also
-missing where the award year has no usable training rows.
+standard deviation of zero, so the z-score is undefined. Ranking city
+population within our own rows hit both problems, since each Games has one host
+city, and the rank came back at the same value nearly every time. Ranking
+against the full UN file fixed it: of 875 Olympic rows, `city_pop_pct_rank` is
+now 1 for 26 and missing for 118, with `city_pop_z` missing for the same 118.
+Capacity still carries the group-size limitation, and a value is missing where
+the award year has no usable training rows.
 
 ---
 
