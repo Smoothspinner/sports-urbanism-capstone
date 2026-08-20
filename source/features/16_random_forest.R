@@ -90,6 +90,19 @@ fit_rf <- train(white_elephant ~ . - edition_id, data = ol_train, method = "rf",
 cat("Cross-validated results, mtry = 2 (random forest) vs mtry = 4 (bagging)\n")
 print(fit_rf$results)
 
+# Scored the same forest again with the folds picked at random instead of
+# grouped by edition, so the two tables differ only in how the folds were
+# built.
+ctrl_plain <- trainControl(method = "repeatedcv", number = 5, repeats = 10,
+                           classProbs = TRUE, summaryFunction = twoClassSummary)
+
+fit_rf_plain <- train(white_elephant ~ . - edition_id, data = ol_train,
+                      method = "rf", trControl = ctrl_plain,
+                      tuneGrid = tune_grid, metric = "ROC")
+
+cat("Same forest scored with ordinary repeated folds, for comparison\n")
+print(fit_rf_plain$results)
+
 cat("Variable importance, best mtry from CV\n")
 importance(fit_rf$finalModel)
 
