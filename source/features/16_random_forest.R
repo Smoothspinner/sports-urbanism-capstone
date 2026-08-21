@@ -4,10 +4,14 @@
 # logistic regression / LDA models) never scored the World Cup side, so it's
 # not repeated here.
 
-# Compared bagging (mtry = 4, every predictor available at each split)
-# against a smaller mtry (2, the rounded default for four predictors), to
-# see whether restricting the split candidates changed anything on this
-# data. Same 4 predictors as the baseline models.
+# Added region to match the predictor set the other two S6 models use, so
+# the three are comparable. Region holds one of four continents, and R turns
+# it into three yes/no columns, so the forest sees seven columns rather than
+# five predictors.
+
+# Compared mtry = 7, where every column is available at each split, against
+# mtry = 3, the rounded default for seven columns, to see whether limiting
+# the columns each split can choose from changed anything on this data.
 
 # CV folds are grouped by Olympics edition (games_year + host_city) so no
 # edition splits across train and validation within a fold, since venues
@@ -27,7 +31,7 @@ library(pROC)
 set.seed(123)
 
 predictors <- c("log_capacity_imp", "gdp_pct_rank_imp",
-                "city_pop_pct_rank_imp", "new_build")
+                "city_pop_pct_rank_imp", "new_build", "region")
 
 make_grouped_folds <- function(edition_id, y, k = 5, repeats = 10, seed = 123) {
   set.seed(seed)
@@ -59,6 +63,7 @@ make_grouped_folds <- function(edition_id, y, k = 5, repeats = 10, seed = 123) {
 ol <- read.csv("data/processed/olympic_model_split.csv")
 ol$white_elephant <- as.factor(ifelse(ol$white_elephant, "yes", "no"))
 ol$new_build <- as.factor(ol$new_build)
+ol$region <- as.factor(ol$region)
 ol$edition_id <- paste(ol$games_year, ol$host_city)
 
 ol_train <- na.omit(ol[ol$set == "train", c("white_elephant", predictors, "edition_id")])
@@ -81,13 +86,13 @@ ctrl <- trainControl(method = "cv", classProbs = TRUE,
                      summaryFunction = twoClassSummary, savePredictions = "final",
                      index = grouped_index)
 
-tune_grid <- data.frame(mtry = c(2, 4))
+tune_grid <- data.frame(mtry = c(3, 7))
 
 fit_rf <- train(white_elephant ~ . - edition_id, data = ol_train, method = "rf",
                 trControl = ctrl, tuneGrid = tune_grid, metric = "ROC",
                 importance = TRUE)
 
-cat("Cross-validated results, mtry = 2 (random forest) vs mtry = 4 (bagging)\n")
+cat("Cross-validated results, mtry = 3 (random forest) vs mtry = 7 (bagging)\n")
 print(fit_rf$results)
 
 # Scored the same forest again with the folds picked at random instead of
