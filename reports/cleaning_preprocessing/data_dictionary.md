@@ -1,7 +1,8 @@
 # Data Dictionary: Modeling Tables
 
-Current as of the Sprint 5 target freeze, covering the same preprocessing and
-feature engineering as the Sprint 4 report. This supersedes the EDA-stage
+Current as of Sprint 6. Preprocessing and feature engineering are unchanged
+since the Sprint 4 report; the Sprint 6 additions are the grouped
+cross-validation folds, which are built at run time and add no columns. This supersedes the EDA-stage
 dictionary at `reports/EDA/data_dictionary.md`, which describes the earlier
 joined tables before feature engineering, splitting and imputation.
 
@@ -9,7 +10,7 @@ Two tables are carried in parallel, one per event type:
 
 | File | Rows | Columns |
 |----|----|----|
-| `data/processed/olympic_model_split.csv` | 875 | 77 |
+| `data/processed/olympic_model_split.csv` | 875 | 78 |
 | `data/processed/worldcup_model_split.csv` | 265 | 73 |
 
 Olympic rows are one venue at one Games. World Cup rows are one stadium at one
@@ -52,15 +53,19 @@ tournament, so a stadium used at two tournaments appears twice.
 | `iso3c` | text | Country code |
 | `coords` | text | Stadium coordinate from the Wikidata pull |
 
-Design purpose comes from the stadium's Wikipedia article, based on how the
-opening description characterizes the venue. A stadium described there as a
-football ground is recorded as Single-purpose, and one described as a multi-use
-or multi-purpose venue is recorded as Multi-purpose. On stadiums rebuilt
+Design purpose comes from the stadium's Wikipedia article, based on whether the
+opening description shows the venue serving sports beyond association football.
+A stadium described only as a football ground is recorded as Single-purpose. One
+described as a multi-use or multi-purpose venue, or as also hosting another
+sport such as rugby, gridiron football or baseball, is recorded as
+Multi-purpose. On stadiums rebuilt
 between tournaments the label is judged per appearance, so the same venue can
 be Multi-purpose in one row and Single-purpose in another.
 
-The Olympic table carries no design purpose column. The IOC report does not
-record one, and the criterion above has not been applied to Olympic venues.
+The Olympic table carries no design purpose column. The IOC reports do not
+label venues by purpose, so the criterion above has not been applied to Olympic
+venues. They do record the sports each venue hosted, which is carried in
+`use_at_games` and is populated for all 875 rows.
 
 ---
 
@@ -94,7 +99,7 @@ the year it was held, because award year is when the building decision was made.
 | `city_lon`, `city_lat` | number | UN city file | Host city center coordinate |
 | `distance_mi` | number | Haversine distance | Miles from the venue to the host city center |
 | `log_capacity`, `log_gdp`, `log_city_pop`, `log_distance` | number | `log1p()` of the source column | All four are right-skewed in raw form |
-| `class_group` (Olympic) | category | `venue_classification` | Cleaned to Existing / New / Temporary |
+| `class_clean`, `class_group` (Olympic) | text | `venue_classification` | Whitespace and case normalized, then bucketed to Existing / New / Temporary |
 | `new_build` | 0/1 | `class_group` or `newly_built` | 1 = built for the event, 0 = already existed. Missing for the 11 Olympic rows classified Temporary |
 | `single_purpose` (World Cup) | 0/1 | `design_purpose` | 1 = single-purpose |
 | `era` | category | event year | pre-WWII (to 1945), postwar (1946 to 2000), recent (2001 on) |
@@ -155,7 +160,8 @@ reason as well, taken from the coding in the V4 venue reports. Replaced by
 successor and war are never failures. Urban redevelopment is held behind a
 switch at the top of `10_cleaning_transforms.R`,
 `REDEVELOPMENT_COUNTS_AS_FAILURE`, currently FALSE. Setting it to TRUE moves 69
-Olympic and 5 World Cup venues into the positive class.
+Olympic and 5 World Cup rows into the positive class. Those 69 Olympic rows are
+67 distinct venues, two of which appear at two Games each.
 
 The positive class holds 26 of 875 Olympic rows and 4 of 265 World Cup rows, so
 accuracy is not a usable score on either table.
