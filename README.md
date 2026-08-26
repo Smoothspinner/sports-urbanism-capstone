@@ -36,11 +36,14 @@ and the model will outperform a naive baseline that always predicts "stays activ
 - `data/processed`: cleaned tables our scripts produce
 - `data/external`: reference pulls (e.g., Wikidata)
 - `source/data`: cleaning and join scripts (numbered in run order: 01_, 02_...)
-- `source/features`: feature engineering and modeling scripts currently in use (13, 14)
-- `source/models`: model scripts, subfolders `baseline`, `GBM`, `RF`
+- `source/features`: feature engineering and exploratory scripts (13, 14, 15)
+- `source/models`: tuned Sprint 6 models, one subfolder per model: `penalized_logistic`
+  (18, 19), `GBM` (17), `RF` (16, 16b). `20_threshold_range_reporting.R` sits at the
+  top level since it evaluates all three models together rather than belonging to
+  one. `baseline` exists as a placeholder for script 14, not yet moved there.
 - `source/visualization`: plotting scripts
 - `reports`: weekly deliverables (proposal, EDA, etc.)
-  
+
 ## How to Run
 1. Open the project in RStudio.
 2. Set the working directory to the repo root: **Session > Set Working
@@ -48,10 +51,18 @@ and the model will outperform a naive baseline that always predicts "stays activ
    the one that contains this README file and the `source` and `data` folders.
    Scripts use paths relative to the repo root, so this step is required every session.
 3. Install any missing packages: `tidyverse, countrycode, geosphere,
-   stringi, httr, jsonlite, readxl, WDI, caret, pROC` (MASS installs
-   automatically with caret).
+   stringi, httr, jsonlite, readxl, WDI, caret, pROC, glmnet, gbm` (MASS
+   installs automatically with caret).
 4. Run the scripts in `source/data` in order (01 through 12), then the
    scripts in `source/features` (13, 14, 15).
+5. For Sprint 6 modeling, run `source/models/penalized_logistic/18_penalized_logistic.R`,
+   `source/models/RF/16_random_forest.R`, and `source/models/GBM/17_gradient_boosting.R`.
+   These three are independent of each other and can be run in any order. Run
+   `source/models/20_threshold_range_reporting.R` last, since it depends on all
+   three already being loaded in the same R session.
+   `source/models/RF/16b_random_forest_region_check.R` and
+   `source/models/penalized_logistic/19_penalized_logistic_capacity_check.R` are
+   standalone diagnostics, not required to reproduce the main results.
 
 | # | Script | What it does |
 |---|--------|---------------|
@@ -70,6 +81,12 @@ and the model will outperform a naive baseline that always predicts "stays activ
 | 13 | `13_unsupervised_pca_kmeans.R` | PCA and k-means exploration of the feature space |
 | 14 | `14_baseline_models.R` | Logistic regression and LDA baseline classifiers, cross-validated |
 | 15 | `15_missingness_diagnostic.R` | Reproduces Table 1: tests each imputed predictor's missing-flag against the outcome (Fisher's exact test) |
+| 16 | `16_random_forest.R` | Random forest, Sprint 6's second tunable model. Grouped Olympic-edition cross-validation, tunes `mtry` |
+| 16b | `16b_random_forest_region_check.R` | Diagnostic: what adding region as a predictor costs the random forest, holding rows, folds, and `mtry` fixed |
+| 17 | `17_gradient_boosting.R` | Gradient boosting, Sprint 6's third tunable model. Grouped CV, tunes number of trees, tree depth, and learning rate |
+| 18 | `18_penalized_logistic.R` | Elastic net (glmnet) penalized logistic regression, Sprint 6's first tunable model. Grouped CV, tunes alpha and lambda jointly |
+| 19 | `19_penalized_logistic_capacity_check.R` | Diagnostic: whether dropping log capacity for region costs real signal in the elastic net |
+| 20 | `20_threshold_range_reporting.R` | Evaluates classification thresholds as a range across all three tuned models, rather than one single cutoff |
 
 ## Data Sources
 - **World Bank** (via the `WDI` package): GDP per capita, 1960-2026
@@ -88,9 +105,12 @@ and the model will outperform a naive baseline that always predicts "stays activ
 | `rank_within_train()` | 11 | Percentile rank and z-score of a value against the training set's distribution only, by award year |
 | `search_title()`, `iri()` | 07 | Find and format the Wikipedia page most likely matching a venue name + host city |
 | `best_cut()` | 14 | Picks the classification threshold that balances sensitivity and specificity (Youden's J) from pooled cross-validation predictions |
+| `make_grouped_folds()` | 16, 16b, 17, 18 | Builds cross-validation folds that keep every venue from the same Olympic edition in one fold, so no edition splits across training and validation. Defined separately in each of these four scripts rather than shared from one place. |
+| `best_oof_predictions()` | 20 | Filters a caret model's saved predictions down to just its selected tuning parameters |
+| `threshold_metrics()` | 20 | Computes sensitivity, specificity, precision, and F1 at one probability threshold |
+| `make_threshold_report()` | 20 | Runs `threshold_metrics()` across a grid of thresholds for one model |
 
 ## Contributors
-- Jonathan Layne: unsupervised analysis (13), report assembly, reviewed the code directly and caught errors before the report went out
-- Brian Wrenn: sourced and coded the venue status/closure-reason raw data, the basis for our target variable
-- Martin Gotora: full data pipeline (01-12), baseline models (14)
-
+- Jonathan Layne: unsupervised analysis (13), random forest (16, 16b), report assembly, reviewed code directly and caught errors before submission
+- Brian Wrenn: sourced and coded the venue status/closure-reason raw data, the basis for our target variable; gradient boosting (17); threshold-range reporting (20)
+- Martin Gotora: full data pipeline (01-12), baseline models (14), elastic net / penalized logistic regression (18, 19)
