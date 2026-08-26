@@ -3,9 +3,10 @@
 #
 # Run this AFTER:
 #   source("source/models/penalized_logistic/18_penalized_logistic.R")
-#   source("source/features/16_random_forest.R")
+#   source("source/models/RF/16_random_forest.R")
+#   source("source/models/GBM/17_gradient_boosting.R")
 #
-# Both models must use the grouped Olympic-edition CV before this script is run.
+# All three models must use the grouped Olympic-edition CV before this script is run.
 # This script evaluates the saved out-of-fold probabilities from those grouped
 # folds. It does NOT choose a single "best" threshold from the final test set.
 
@@ -17,12 +18,15 @@ if (!exists("fit_glmnet")) {
 if (!exists("fit_rf")) {
   stop("fit_rf not found. Run 16_random_forest.R first.")
 }
+if (!exists("fit_gbm")) {
+  stop("fit_gbm not found. Run 17_gradient_boosting.R first.")
+}
 
 # Keep only predictions for the selected tuning parameters if caret stored more
 # than one tuning combination.
 best_oof_predictions <- function(fit) {
   pred <- fit$pred
-
+  
   if ("alpha" %in% names(pred) && "alpha" %in% names(fit$bestTune)) {
     pred <- pred |> filter(alpha == fit$bestTune$alpha)
   }
@@ -32,24 +36,24 @@ best_oof_predictions <- function(fit) {
   if ("mtry" %in% names(pred) && "mtry" %in% names(fit$bestTune)) {
     pred <- pred |> filter(mtry == fit$bestTune$mtry)
   }
-
+  
   pred
 }
 
 # Calculate classification metrics at one threshold.
 threshold_metrics <- function(obs, prob_yes, threshold) {
   pred_yes <- prob_yes >= threshold
-
+  
   actual_yes <- obs == "yes"
   actual_no  <- obs == "no"
-
+  
   tp <- sum(pred_yes & actual_yes, na.rm = TRUE)
   fp <- sum(pred_yes & actual_no,  na.rm = TRUE)
   tn <- sum(!pred_yes & actual_no, na.rm = TRUE)
   fn <- sum(!pred_yes & actual_yes, na.rm = TRUE)
-
+  
   safe_div <- function(a, b) ifelse(b == 0, NA_real_, a / b)
-
+  
   sensitivity <- safe_div(tp, tp + fn)
   specificity <- safe_div(tn, tn + fp)
   precision   <- safe_div(tp, tp + fp)
@@ -59,7 +63,7 @@ threshold_metrics <- function(obs, prob_yes, threshold) {
     NA_real_,
     2 * precision * sensitivity / (precision + sensitivity)
   )
-
+  
   tibble(
     threshold = threshold,
     sensitivity = sensitivity,
@@ -86,11 +90,11 @@ threshold_grid <- c(
 
 make_threshold_report <- function(fit, model_name) {
   pred <- best_oof_predictions(fit)
-
+  
   if (!all(c("obs", "yes") %in% names(pred))) {
     stop(paste(model_name, "does not contain caret OOF columns 'obs' and 'yes'."))
   }
-
+  
   map_dfr(
     threshold_grid,
     ~ threshold_metrics(pred$obs, pred$yes, .x)
@@ -100,6 +104,7 @@ make_threshold_report <- function(fit, model_name) {
 
 glmnet_pred <- best_oof_predictions(fit_glmnet)
 rf_pred     <- best_oof_predictions(fit_rf)
+gbm_pred    <- best_oof_predictions(fit_gbm)
 
 probability_summary <- bind_rows(
   tibble(
@@ -121,12 +126,23 @@ probability_summary <- bind_rows(
     p95 = quantile(rf_pred$yes, 0.95, na.rm = TRUE),
     max = max(rf_pred$yes, na.rm = TRUE),
     sd = sd(rf_pred$yes, na.rm = TRUE)
+  ),
+  tibble(
+    model = "Gradient boosting",
+    n_oof_predictions = nrow(gbm_pred),
+    min = min(gbm_pred$yes, na.rm = TRUE),
+    p05 = quantile(gbm_pred$yes, 0.05, na.rm = TRUE),
+    median = median(gbm_pred$yes, na.rm = TRUE),
+    p95 = quantile(gbm_pred$yes, 0.95, na.rm = TRUE),
+    max = max(gbm_pred$yes, na.rm = TRUE),
+    sd = sd(gbm_pred$yes, na.rm = TRUE)
   )
 )
 
 threshold_results <- bind_rows(
   make_threshold_report(fit_glmnet, "Penalized logistic regression"),
-  make_threshold_report(fit_rf, "Random forest")
+  make_threshold_report(fit_rf, "Random forest"),
+  make_threshold_report(fit_gbm, "Gradient boosting")
 )
 
 cat("\n== OOF probability summaries ==\n")
@@ -186,12 +202,3 @@ cat("\nSaved:\n")
 cat("  reports/modeling/tables/threshold_probability_summary.csv\n")
 cat("  reports/modeling/tables/threshold_range_results.csv\n")
 cat("  reports/modeling/figs/fig_threshold_range_metrics.png\n")
-
-# NOTE FOR GBM:
-# When the grouped-CV GBM is finished, add:
-#
-# gbm_pred <- best_oof_predictions(fit_gbm)
-# gbm_thresholds <- make_threshold_report(fit_gbm, "Gradient boosting")
-# threshold_results <- bind_rows(threshold_results, gbm_thresholds)
-#
-# Then re-run the save/plot sections above.
