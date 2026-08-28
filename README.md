@@ -36,7 +36,7 @@ and the model will outperform a naive baseline that always predicts "stays activ
 - `data/processed`: cleaned tables our scripts produce
 - `data/external`: reference pulls (e.g., Wikidata)
 - `source/data`: cleaning and join scripts (numbered in run order: 01_, 02_...)
-- `source/features`: feature engineering and exploratory scripts (13, 14, 15)
+- `source/features`: feature engineering and exploratory scripts (13, 14, 15, 21)
 - `source/models`: tuned Sprint 6 models, one subfolder per model: `penalized_logistic`
   (18, 19), `GBM` (17), `RF` (16, 16b). `20_threshold_range_reporting.R` sits at the
   top level since it evaluates all three models together rather than belonging to
@@ -54,7 +54,9 @@ and the model will outperform a naive baseline that always predicts "stays activ
    stringi, httr, jsonlite, readxl, WDI, caret, pROC, glmnet, gbm` (MASS
    installs automatically with caret).
 4. Run the scripts in `source/data` in order (01 through 12), then the
-   scripts in `source/features` (13, 14, 15).
+   scripts in `source/features` (13, 14, 15). Run `21_final_eda.R` after 12,
+   since it reads the split file and writes the report's Data Exploration
+   figures.
 5. For Sprint 6 modeling, run `source/models/penalized_logistic/18_penalized_logistic.R`,
    `source/models/RF/16_random_forest.R`, and `source/models/GBM/17_gradient_boosting.R`.
    These three are independent of each other and can be run in any order. Run
@@ -87,6 +89,7 @@ and the model will outperform a naive baseline that always predicts "stays activ
 | 18 | `18_penalized_logistic.R` | Elastic net (glmnet) penalized logistic regression, Sprint 6's first tunable model. Grouped CV, tunes alpha and lambda jointly |
 | 19 | `19_penalized_logistic_capacity_check.R` | Diagnostic: whether dropping log capacity for region costs real signal in the elastic net |
 | 20 | `20_threshold_range_reporting.R` | Evaluates classification thresholds as a range across all three tuned models, rather than one single cutoff |
+| 21 | `21_final_eda.R` | EDA on the final modeling dataset for the Sprint 7 report. Writes five figures to `reports/EDA/final/` |
 
 ## Data Sources
 - **World Bank** (via the `WDI` package): GDP per capita, 1960-2026
