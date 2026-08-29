@@ -99,7 +99,7 @@ png("reports/cleaning_preprocessing/figs/fig1_pca_scree.png",
     width = 1800, height = 1100, res = 200)
 barplot(var.pct,
         names.arg = paste0("PC", 1:7),
-        main = "Figure 1. Variance explained by each principal component",
+        main = "Figure 6. Variance explained by each principal component",
         xlab = "Principal component",
         ylab = "Share of variance explained (%)")
 dev.off()
