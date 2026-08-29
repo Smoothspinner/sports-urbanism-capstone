@@ -36,11 +36,11 @@ and the model will outperform a naive baseline that always predicts "stays activ
 - `data/processed`: cleaned tables our scripts produce
 - `data/external`: reference pulls (e.g., Wikidata)
 - `source/data`: cleaning and join scripts (numbered in run order: 01_, 02_...)
-- `source/features`: feature engineering and exploratory scripts (13, 14, 15, 21)
-- `source/models`: tuned Sprint 6 models, one subfolder per model: `penalized_logistic`
-  (18, 19), `GBM` (17), `RF` (16, 16b). `20_threshold_range_reporting.R` sits at the
-  top level since it evaluates all three models together rather than belonging to
-  one. `baseline` exists as a placeholder for script 14, not yet moved there.
+- `source/features`: feature engineering and exploratory scripts (13, 15, 21)
+- - `source/models`: tuned Sprint 6 models, one subfolder per model: `baseline` (14),
+  `penalized_logistic` (18, 19), `GBM` (17), `RF` (16, 16b). `20_threshold_range_reporting.R`
+  sits at the top level since it evaluates all three models together rather than
+  belonging to one.
 - `source/visualization`: plotting scripts
 - `reports`: weekly deliverables (proposal, EDA, etc.)
 
@@ -54,7 +54,7 @@ and the model will outperform a naive baseline that always predicts "stays activ
    stringi, httr, jsonlite, readxl, WDI, caret, pROC, glmnet, gbm` (MASS
    installs automatically with caret).
 4. Run the scripts in `source/data` in order (01 through 12), then the
-   scripts in `source/features` (13, 14, 15). Run `21_final_eda.R` after 12,
+   scripts in `source/features` (13, 15). Run `21_final_eda.R` after 12,
    since it reads the split file and writes the report's Data Exploration
    figures.
 5. For Sprint 6 modeling, run `source/models/penalized_logistic/18_penalized_logistic.R`,
