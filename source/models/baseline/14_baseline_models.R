@@ -102,7 +102,7 @@ roc_logit <- roc(fit_logit$pred$obs, fit_logit$pred$yes,
 roc_lda   <- roc(fit_lda$pred$obs, fit_lda$pred$yes,
                  levels = c("no", "yes"), direction = "<", quiet = TRUE)
 
-png("baseline_roc_curves.png", width = 1600, height = 1400, res = 200)
+png("reports/modeling/figs/baseline_roc_curves.png", width = 1600, height = 1400, res = 200)
 plot(roc_logit, col = "#2b6cb0", lwd = 2,
      main = "Baseline ROC Curves, Olympic Data (Pooled Out-of-Fold CV Predictions)")
 plot(roc_lda, col = "#c05621", lwd = 2, add = TRUE)

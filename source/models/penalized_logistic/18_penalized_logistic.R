@@ -122,7 +122,7 @@ cat("Elastic net (grouped CV, this script):           ", round(mean(fit_glmnet$r
 roc_glmnet <- roc(fit_glmnet$pred$obs, fit_glmnet$pred$yes,
                   levels = c("no", "yes"), direction = "<", quiet = TRUE)
 
-png("penalized_logistic_roc_curve.png", width = 1600, height = 1400, res = 200)
+png("reports/modeling/figs/penalized_logistic_roc_curve.png", width = 1600, height = 1400, res = 200)
 plot(roc_glmnet, col = "#276749", lwd = 2,
      main = "Elastic Net ROC Curve, Olympic Data (Grouped CV, Pooled Out-of-Fold Predictions)")
 abline(a = 1, b = -1, lty = 2, col = "gray60")
