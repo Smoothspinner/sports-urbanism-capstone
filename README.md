@@ -37,7 +37,7 @@ and the model will outperform a naive baseline that always predicts "stays activ
 - `data/external`: reference pulls (e.g., Wikidata)
 - `source/data`: cleaning and join scripts (numbered in run order: 01_, 02_...)
 - `source/features`: feature engineering and exploratory scripts (13, 15, 21)
-- - `source/models`: tuned Sprint 6 models, one subfolder per model: `baseline` (14),
+- `source/models`: tuned Sprint 6 models, one subfolder per model: `baseline` (14),
   `penalized_logistic` (18, 19), `GBM` (17), `RF` (16, 16b). `20_threshold_range_reporting.R`
   sits at the top level since it evaluates all three models together rather than
   belonging to one.

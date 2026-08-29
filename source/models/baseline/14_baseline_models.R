@@ -115,4 +115,4 @@ legend("bottomright",
        lwd = c(2, 2, 1), lty = c(1, 1, 2))
 dev.off()
 
-cat("Saved baseline_roc_curves.png to the repo root.\n")
+cat("Saved baseline_roc_curves.png to reports/modeling/figs.\n")

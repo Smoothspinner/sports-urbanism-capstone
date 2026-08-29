@@ -131,7 +131,7 @@ legend("bottomright",
                   "Chance"),
        col = c("#276749", "gray60"), lwd = c(2, 1), lty = c(1, 2))
 dev.off()
-cat("\nSaved penalized_logistic_roc_curve.png to the repo root.\n")
+cat("\nSaved penalized_logistic_roc_curve.png to reports/modeling/figs.\n")
 
 # ---- World Cup: descriptive only, not CV-scored ----
 wc <- read_csv("data/processed/worldcup_model_split.csv", show_col_types = FALSE) |>
