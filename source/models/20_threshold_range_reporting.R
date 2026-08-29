@@ -195,7 +195,8 @@ ggsave(
   p,
   width = 9,
   height = 6,
-  dpi = 300
+  dpi = 300,
+  bg = "white"
 )
 
 cat("\nSaved:\n")
