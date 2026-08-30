@@ -24,6 +24,9 @@
 # train/test split is grouped by venue and not by Games edition, so the
 # test set has the same shared-GDP problem the folds just fixed.
 
+# Reran this from the repo root on 2026-08-30 and it ran without error, on
+# the same 561 training rows and 17 failures across 53 editions.
+
 library(randomForest)
 library(caret)
 library(pROC)

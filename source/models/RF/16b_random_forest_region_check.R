@@ -9,6 +9,9 @@
 # both predictor sets, so the only thing changing between the two rows is
 # whether region is in the model.
 
+# Reran this from the repo root on 2026-08-30 and it ran without error. The
+# cost of adding region came out -0.0506 at mtry 2 and -0.0667 at mtry 4.
+
 library(randomForest)
 library(caret)
 library(pROC)

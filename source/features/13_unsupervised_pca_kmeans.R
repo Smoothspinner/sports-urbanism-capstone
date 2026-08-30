@@ -3,6 +3,9 @@
 # The outcome was kept out of both and only used afterwards, to check whether
 # the groups they found had anything to do with what we are trying to predict.
 
+# Reran this from the repo root on 2026-08-30 and it ran without error. The
+# variance shares came out the same as the ones pasted further down.
+
 set.seed(123)
 
 ol <- read.csv("data/processed/olympic_model_split.csv")

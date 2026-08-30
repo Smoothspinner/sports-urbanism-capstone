@@ -9,6 +9,9 @@
 # the figures it writes are embedded in the Sprint 3 report we submitted, so
 # rerunning an edited copy would overwrite them.
 
+# Reran this from the repo root on 2026-08-30 and it ran without error. The
+# five figures it writes matched the copies already committed.
+
 ol <- read.csv("data/processed/olympic_model_split.csv")
 raw <- read.csv("data/processed/olympic_model.csv")
 
